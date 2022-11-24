@@ -1,0 +1,204 @@
+//Week 2: example programs written in the class
+//1. const method
+
+#include <iostream>
+#include <conio.h>
+#include <stdlib.h>
+#include <string>
+#include <math.h>
+
+using namespace std;
+
+class A{
+ private:
+  int x;
+  int y;
+ public:
+    void SetData(int m,int n){
+    x=m;
+    y=n;
+    }
+    void GetData()const{
+     x++;                //x can't be changed in const method
+			 // use mutable keyword in front of int x to avoid const
+     cout<<"x="<<x<<endl;
+     cout<<"y="<<y<<endl;
+    }
+};
+int blade;
+int main()
+{
+    A a;
+    a.SetData(10,20);
+    a.GetData();
+    return 0;
+}
+
+
+//---------------------------------------------------------------------
+//2. Static Data Member
+#include <iostream>
+#include <conio.h>
+#include <stdlib.h>
+#include <string>
+#include <math.h>
+
+using namespace std;
+
+class A{
+ private:
+  int x;
+  static int y;  //should be declared outside the class
+ public:
+    void SetData(int m){
+    x=m;
+    y++;
+    }
+    void GetData()const{
+     cout<<"x="<<x<<endl;
+     cout<<"y="<<y<<endl;
+    }
+};
+int A::y=0; //static data member declaration outside the class
+
+int main()
+{
+    A a;
+    a.SetData(10);
+    a.GetData();
+    A b;
+    b.SetData(10);
+    b.GetData();
+
+    return 0;
+}
+
+//-----------------------------------------------------------------------------
+//2. Static Method
+#include <iostream>
+#include <conio.h>
+#include <stdlib.h>
+#include <string>
+#include <math.h>
+
+using namespace std;
+
+class A{
+ private:
+  int x;
+  static int y;  //should be declared outside the class
+ public:
+    void SetData(int m){
+    x=m;
+    y++;
+    }
+    static void GetData(){
+     cout<<"x="<<x<<endl;  //Error: non-static data member x in static method
+     cout<<"y="<<y<<endl;  
+    }
+};
+int A::y=0; //static data member declaration outside the class
+
+int main()
+{
+    A a;
+    a.SetData(10);
+    a.GetData();
+    A b;
+    b.SetData(10);
+    b.GetData();
+
+    return 0;
+}
+
+//------------------------------------------------------------------
+
+//3. Default/parameterized constructor
+#include <iostream>
+#include <conio.h>
+#include <stdlib.h>
+#include <string>
+#include <math.h>
+
+using namespace std;
+
+class A{
+ private:
+  int x;
+  int y;
+ public:
+     //default constructor
+    A(){
+     cout<<"Inside Default Constructor"<<endl;
+    }
+    //Parameterized constructor
+    A(int m, int n){
+    x=m;
+    y=n;
+    }
+    void SetData(int m,int n){
+    x=m;
+    y=n;
+    }
+     void GetData(){
+     cout<<"x="<<x<<endl;
+     cout<<"y="<<y<<endl;
+    }
+};
+
+int main()
+{
+    A a;  //default constructor is called
+    A b(10,20);//Parameterized constructor is called
+    a.GetData();
+    b.GetData();
+
+    return 0;
+}
+
+//-------------------------------------------------------
+
+//4. Copy constructor
+#include <iostream>
+#include <conio.h>
+#include <stdlib.h>
+#include <string>
+#include <math.h>
+
+using namespace std;
+
+class A{
+ private:
+  int x;
+  int y;
+ public:
+     // Copy constructor
+    A(A &p){   //p is an address of an object of type class A
+     x=p.x;
+     y=p.y;
+    }
+    //Parameterized constructor
+    A(int m, int n){
+    x=m;
+    y=n;
+    }
+    void SetData(int m,int n){
+    x=m;
+    y=n;
+    }
+     void GetData(){
+     cout<<"x="<<x<<endl;
+     cout<<"y="<<y<<endl;
+    }
+};
+
+int main()
+{
+    A a(10,20);
+    A b(a);
+    a.GetData();
+    b.GetData();
+
+    return 0;
+}
+

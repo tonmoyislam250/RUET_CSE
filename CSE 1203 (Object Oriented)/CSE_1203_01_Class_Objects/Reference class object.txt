@@ -1,0 +1,82 @@
+//Date: 27/9/2022
+//Reference class object
+#include <iostream>
+using namespace std;
+class A{
+ int x;
+ public:
+ A(int a){
+  x=a;
+ }
+ void setData(int y){
+  x=y;
+ }
+ void getData(){
+  cout<<"x="<<x<<endl;
+ }
+};
+int main()
+
+{
+    A ob1(10);
+    ob1.getData();
+    A *p;
+    p=&ob1;
+    p->setData(20);
+    p->getData();
+    return 0;
+}
+
+------------------------------------------------------------------
+//Reference class object with new
+#include <iostream>
+using namespace std;
+class A{
+ int x;
+ public:
+ A(int a){
+  x=a;
+ }
+ void setData(int y){
+  x=y;
+ }
+ void getData(){
+  cout<<"x="<<x<<endl;
+ }
+};
+int main()
+
+{
+    A *p=new A(10);
+    p->getData();
+    return 0;
+}
+---------------------------------------------
+//Destructor
+#include <iostream>
+using namespace std;
+class A{
+ int x;
+ public:
+ A(int a){
+  x=a;
+ }
+ void setData(int y){
+  x=y;
+ }
+ void getData(){
+  cout<<"x="<<x<<endl;
+ }
+ ~A(){
+  cout<<"Destructor is called"<<endl;
+ }
+};
+int main()
+
+{
+    A *p=new A(10);
+    p->getData();
+    //for traditional object, destructor is automatically calaled
+    delete p;   //used for pointer reference
+    return 0;
+}
