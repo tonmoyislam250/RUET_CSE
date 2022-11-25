@@ -9,7 +9,7 @@ void menu()
 class Queue
 {
 private:
-    int rear = -1, front = -1, n = 100, a[100];
+    int rear = -1, front = -1, n = 3, a[3];
 
 public:
     // void sizer()
@@ -35,15 +35,14 @@ public:
         }
         else
         {
-            if (rear == front - 1)
+            if (rear + 1 == front)
                 printf("Queue is full.\n");
             else
-            {
-                a[++rear] = y;
-            }
+                a[rear++] = y;
         }
     }
-    void dequeue()
+
+    int dequeue()
     {
         int x;
         if (rear == front)
@@ -56,15 +55,14 @@ public:
                 front++;
             x = a[front];
         }
+        return x;
     }
     void display()
     {
-        int i = front;
+        int i = front + 1;
         while (i <= rear)
         {
-            cout << "¯¯¯" << endl;
             cout << a[i] << endl;
-            cout << "___";
             i++;
         }
         cout << endl;
