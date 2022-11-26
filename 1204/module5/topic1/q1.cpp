@@ -12,7 +12,7 @@ int main()
         {
             throw "Index out of Range";
         }
-        else if (stoi(i) > 0 && stoi(i) < 4)
+        else if (stoi(i) > 0 && stoi(i) <= 4)
         {
             throw stoi(i);
         }
@@ -27,6 +27,6 @@ int main()
     }
     catch (...)
     {
-        cout << "Your index is not an integrer" << endl;
+        cout << "Your index is not an integer" << endl;
     }
 }

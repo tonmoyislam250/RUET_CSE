@@ -12,7 +12,8 @@ public:
         this->x = x;
         this->y = y;
     }
-    R getSum()
+    template <typename O>
+    O getSum()
     {
         return x + y;
     }
@@ -21,11 +22,14 @@ int main()
 {
     A<int, int> a;
     a.setData(3, 4);
-    cout << "The sum is " << a.getSum() << endl;
+    cout << "The sum is " << a.getSum<int>() << endl;
     A<int, double> b;
     b.setData(3, 4.4);
-    cout << "The sum is " << b.getSum() << endl;
+    cout << "The sum is " << b.getSum<double>() << endl;
     A<double, double> c;
     c.setData(3.3, 4.4);
-    cout << "The sum is " << c.getSum() << endl;
+    cout << "The sum is " << c.getSum<double>() << endl;
+    A<double, int> d;
+    d.setData(3.3, 4.4);
+    cout << "The sum is " << c.getSum<double>() << endl;
 }

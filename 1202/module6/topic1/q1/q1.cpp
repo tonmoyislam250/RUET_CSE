@@ -27,7 +27,7 @@ public:
         }
         else
         {
-            if (front = -1)
+            if (front == -1)
                 front = 0;
             rear++;
             queue[rear] = y;

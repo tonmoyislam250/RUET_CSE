@@ -4,6 +4,9 @@
     "*.tcc": "cpp",
     "chrono": "cpp",
     "complex": "cpp",
-    "limits": "cpp"
+    "limits": "cpp",
+    "array": "cpp",
+    "bitset": "cpp",
+    "algorithm": "cpp"
   }
 }
