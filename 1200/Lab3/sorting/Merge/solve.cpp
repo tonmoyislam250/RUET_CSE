@@ -5,6 +5,8 @@ void merger(int a[], int x, int m, int y)
     int i = 0, j = 0;
     auto size1 = m - x + 1, size2 = y - m;
     int *b = new int[size1], *c = new int[size2];
+    cout << "Low = " << x << " "
+         << "Mid= " << m << " End = " << y << " Size1 = " << size1 << " Size2 = " << size2 << endl;
     while (i < size1)
     {
         b[i] = a[x + i];
@@ -24,11 +26,13 @@ void merger(int a[], int x, int m, int y)
         if (b[ii] <= c[jj])
         {
             a[kk] = b[ii];
+            cout << b[ii] << " ";
             ii++;
         }
         else
         {
             a[kk] = c[jj];
+            cout << c[jj] << " ";
             jj++;
         }
         kk++;
@@ -36,27 +40,29 @@ void merger(int a[], int x, int m, int y)
     while (ii < size1)
     {
         a[kk] = b[ii];
+        cout << b[ii] << " ";
         ii++;
         kk++;
     }
     while (jj < size2)
     {
         a[kk] = c[jj];
+        cout << c[jj] << " ";
         jj++;
         kk++;
     }
+    cout << endl;
 }
 
 void mergeSort(int a[], int x, int y)
 {
-    if (x >= y)
-    {
-        return;
-    }
     auto m = x + (y - x) / 2;
-    mergeSort(a, x, m);
-    mergeSort(a, m + 1, y);
-    merger(a, x, m, y);
+    if (x < y)
+    {
+        mergeSort(a, x, m);
+        mergeSort(a, m + 1, y);
+        merger(a, x, m, y);
+    }
 }
 void print(int a[], int x, int y)
 {
