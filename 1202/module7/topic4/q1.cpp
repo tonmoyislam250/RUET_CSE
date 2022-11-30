@@ -74,7 +74,7 @@ void print(int a[], int x, int y)
 }
 int main()
 {
-    int a[] = {8, 4, 5, 1, 3, 2, 7};
+    int a[] = {10, 78, 32, 90, 20, 19, 25};
     auto s = sizeof(a) / sizeof(a[0]);
     cout << "Before Sorting" << endl;
     print(a, 0, s);
