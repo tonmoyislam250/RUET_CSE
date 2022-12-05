@@ -12,7 +12,7 @@ for root, dirnames, filenames in os.walk(git_root):
 
     ft = subprocess.check_output(['file', f]).decode("UTF-8")
 
-    if 'ELF' in ft and 'executable' in ft and 'compiled Java class data' in ft:
+    if 'ELF' in ft and 'executable' in ft and "compiled Java class data" in ft:
       exes.append(f[cut:])
 
 gifiles = [ str.strip(a) for a in open(git_root + "/.gitignore").readlines() ]
