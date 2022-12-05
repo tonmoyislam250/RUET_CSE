@@ -7,7 +7,7 @@ void insertion(int a[], int n)
     {
         k = a[i];
         j = i - 1;
-        cout << "\nkey =" << k << endl;
+        cout << "\nkey = " << k << endl;
         // cout << k << " ";
         while (j >= 0 && a[j] > k)
         {
