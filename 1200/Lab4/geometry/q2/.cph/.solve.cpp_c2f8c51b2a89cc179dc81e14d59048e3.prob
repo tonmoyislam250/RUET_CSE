@@ -1,0 +1,1 @@
+{"name":"Local: solve","url":"d:\\tonmoyk983\\Documents\\RUET_CSE\\repo\\1200\\Lab4\\geometry\\q2\\solve.cpp","tests":[{"id":1670364547779,"input":"2\n1 2 3\n12 34 56","output":"4\n42"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\tonmoyk983\\Documents\\RUET_CSE\\repo\\1200\\Lab4\\geometry\\q2\\solve.cpp","group":"local","local":true}
