@@ -26,4 +26,10 @@ int main()
     }
     display(linkedli);
     revdisplay(linkedli);
+    cout << "Front = " << linkedli.front() << endl;
+    cout << "Back = " << linkedli.back() << endl;
+    linkedli.pop_back();
+    linkedli.pop_front();
+    linkedli.f
+
 }
