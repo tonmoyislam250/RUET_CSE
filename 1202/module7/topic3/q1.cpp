@@ -33,32 +33,41 @@ int partioner(int a[], int x, int y)
     swap(&a[i + 1], &a[y]);
     return i + 1;
 }
-void qs(int a[], int x, int y)
+void qs(int m[], int size, int x, int y)
 {
     if (x < y)
     {
-        int h = partioner(a, x, y);
-        for (int i = 0; i <= 5; i++)
-            cout << a[i] << " ";
+        int h = partioner(m, x, y);
+        for (int i = 0; i <= size - 1; i++)
+        {
+            if (i == h)
+                cout << "(" << m[i] << ")";
+            else
+            {
+                cout << m[i] << " ";
+            }
+        }
         // cout << "\t";
         // for (int i = h + 1; i <= y; i++)
         //     cout << a[i] << " ";
-        cout << endl;
-        qs(a, x, h - 1);
-        qs(a, h + 1, y);
+        cout
+            << endl;
+        qs(m, size, x, h - 1);
+        qs(m, size, h + 1, y);
     }
 }
 int main()
 {
-    int a[] = {7, 5, 1, 4, 3, 2};
+    int a[] = {2, 5, 1, 7, 8, 3, 9, 4};
     int s = sizeof(a) / sizeof(a[0]);
+    // cout << s << endl;
     cout << "Before Swap" << endl;
     for (int i : a)
         cout << i << " ";
     cout << endl;
+    qs(a, s, 0, s - 1);
     cout << "After Swap" << endl;
-    qs(a, 0, s - 1);
-    // for (int i : a)
-    //     cout << i << " ";
-    // cout << endl;
+    for (int i : a)
+        cout << i << " ";
+    cout << endl;
 }

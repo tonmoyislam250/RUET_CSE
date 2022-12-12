@@ -4,8 +4,8 @@ import java.awt.event.*;
 
 class MyFrame extends JFrame {
 
-    private JButton btnTutup = new JButton("Exit");
-    private JButton btnTambah = new JButton("Sum");
+    private JButton exitButtonp = new JButton("Exit");
+    private JButton sumButton = new JButton("Sum");
 
     private JTextField txtA = new JTextField();
     private JTextField txtB = new JTextField();
@@ -14,6 +14,10 @@ class MyFrame extends JFrame {
     private JLabel lblA = new JLabel("A :");
     private JLabel lblB = new JLabel("B :");
     private JLabel lblC = new JLabel("C :");
+
+    String[] choices = { "সেন্ড মানি (*২৪৭#)", "CHOICE 2", "CHOICE 3", "CHOICE 4",
+            "CHOICE 5", "CHOICE 6" };
+    private JComboBox<String> tarrifPannel = new JComboBox<String>(choices);
 
     public MyFrame() {
         setTitle("Sum Calculator");
@@ -28,19 +32,23 @@ class MyFrame extends JFrame {
     }
 
     private void initComponent() {
-        btnTutup.setBounds(300, 130, 80, 25);
-        btnTambah.setBounds(300, 100, 80, 25);
+        exitButtonp.setBounds(300, 130, 80, 25);
+        sumButton.setBounds(300, 100, 80, 25);
 
-        txtA.setBounds(100, 10, 100, 20);
-        txtB.setBounds(100, 35, 100, 20);
-        txtC.setBounds(100, 65, 100, 20);
+        tarrifPannel.setBounds(20, 10, 180, 20);
+        txtA.setBounds(100, 35, 100, 20);
+        txtB.setBounds(100, 65, 100, 20);
+        txtC.setBounds(100, 100, 100, 20);
+        txtC.setEditable(false);
 
-        lblA.setBounds(20, 10, 100, 20);
-        lblB.setBounds(20, 35, 100, 20);
-        lblC.setBounds(20, 65, 100, 20);
+        lblA.setBounds(20, 35, 100, 20);
+        lblB.setBounds(20, 65, 100, 20);
+        lblC.setBounds(20, 100, 100, 20);
 
-        add(btnTutup);
-        add(btnTambah);
+        add(exitButtonp);
+        add(sumButton);
+
+        add(tarrifPannel);
 
         add(lblA);
         add(lblB);
@@ -59,24 +67,24 @@ class MyFrame extends JFrame {
             }
         });
 
-        btnTutup.addActionListener(new ActionListener() {
+        exitButtonp.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                btnTutupClick(e);
+                exitButtonpClick(e);
             }
         });
 
-        btnTambah.addActionListener(new ActionListener() {
+        sumButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                btnTambahClick(e);
+                sumButtonClick(e);
             }
         });
     }
 
-    private void btnTutupClick(ActionEvent evt) {
+    private void exitButtonpClick(ActionEvent evt) {
         System.exit(0);
     }
 
-    private void btnTambahClick(ActionEvent evt) {
+    private void sumButtonClick(ActionEvent evt) {
         Integer x, y, z;
         try {
             x = Integer.parseInt(txtA.getText());
