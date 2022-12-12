@@ -10,6 +10,8 @@ struct node
 int main()
 {
     int LL[50], DATA[50], RL[50];
+    node *ax[50];
+    ax[0] = 0;
     ifstream mac;
     mac.open("store.txt");
     int i = 1;
@@ -20,18 +22,18 @@ int main()
         DATA[i] = int(U);
         mac >> RL[i];
         cout << LL[i] << " " << char(DATA[i]) << " " << RL[i] << endl;
+        ax[i] = new node();
         i++;
     }
-    struct node ax[i];
     for (int m = 1; m <= i - 1; m++)
     {
-        cout << "Node: " << m << " " << char(DATA[m]) << " " << &ax[m] << endl;
-        ax[m].data = DATA[m];
-        ax[m].ll = &ax[LL[m]];
-        ax[m].rr = &ax[RL[m]];
+        cout << "Node: " << m << " " << char(DATA[m]) << " " << ax[m] << " " << endl;
+        ax[m]->data = DATA[m];
+        ax[m]->ll = ax[LL[m]];
+        ax[m]->rr = ax[RL[m]];
     }
     for (int m = 1; m < i; m++)
     {
-        cout << ax[m].ll << " " << LL[m] << "      " << char(ax[m].data) << "     " << RL[m] << " " << ax[m].rr << endl;
+        cout << ax[m]->ll << " " << LL[m] << "      " << char(ax[m]->data) << "     " << RL[m] << " " << ax[m]->rr << endl;
     }
 }
