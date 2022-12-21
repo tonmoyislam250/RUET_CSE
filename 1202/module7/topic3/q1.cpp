@@ -50,8 +50,7 @@ void qs(int m[], int size, int x, int y)
         // cout << "\t";
         // for (int i = h + 1; i <= y; i++)
         //     cout << a[i] << " ";
-        cout
-            << endl;
+        cout<< endl;
         qs(m, size, x, h - 1);
         qs(m, size, h + 1, y);
     }
