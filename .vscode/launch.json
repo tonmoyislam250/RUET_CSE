@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch solve",
+            "request": "launch",
+            "mainClass": "solve",
+            "projectName": "RUET_CSE_592a25a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q21",
+            "request": "launch",
+            "mainClass": "q2.q21",
+            "projectName": "RUET_CSE_592a25a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q2",
+            "request": "launch",
+            "mainClass": "q2.q2",
+            "projectName": "RUET_CSE_592a25a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1Two",
+            "request": "launch",
+            "mainClass": "q1.q1Two",
+            "projectName": "RUET_CSE_592a25a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch q1",
+            "request": "launch",
+            "mainClass": "q1.q1",
+            "projectName": "RUET_CSE_592a25a9"
+        },
+        {
+            "type": "java",
             "name": "Launch frm",
             "request": "launch",
             "mainClass": "frm",
