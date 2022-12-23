@@ -9,5 +9,4 @@ public class q1Two {
         q1.hello3();
         q1.hello4();
     }
-
 }
