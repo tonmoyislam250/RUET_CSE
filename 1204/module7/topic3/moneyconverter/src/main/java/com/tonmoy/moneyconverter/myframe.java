@@ -10,11 +10,13 @@ public class myframe extends JFrame implements ActionListener{
     JTextField txf2 =new JTextField();
     JLabel label = new JLabel("INPUT MONEY");
     JLabel label2 = new JLabel("OUTPUT MONEY");
+    JLabel label3= new JLabel();
     String[] choice={"USD"};
     String[] choice2={"BDT"};
     JComboBox<String> combo = new JComboBox<>(choice);
     JComboBox<String> combo2 = new JComboBox<>(choice2);
     JButton b=new JButton("Convert");
+    JButton b2=new JButton("Clear");
     myframe(){
         setSize(420,420);
         setTitle("MoneyConverter");
@@ -38,6 +40,10 @@ public class myframe extends JFrame implements ActionListener{
         b.setBounds(140, 230, 100, 30);
         b.setBackground(Color.GREEN);
         b.setForeground(Color.red);
+        b2.setBounds(140, 270, 100, 30);
+        b2.setBackground(Color.GREEN);
+        b2.setForeground(Color.red);
+        label3.setBounds(140, 20, 150, 50);
         getContentPane().setLayout(null);
         add(txf);
         add(txf2);
@@ -45,26 +51,45 @@ public class myframe extends JFrame implements ActionListener{
         add(combo2);
         add(label);
         add(b);
+        add(b2);
         add(label2);
+        add(label3);
         b.addActionListener(this);
+        b2.addActionListener(this);
         b.setActionCommand("button");
+        b2.setActionCommand("Clear");
     }
     @Override
     public void actionPerformed(ActionEvent e){
-        String s1=txf.getText();
-        double a=Double.parseDouble(s1);
         if(e.getActionCommand().equals("button")){
         String s0 = (String) combo.getSelectedItem();
         String s = (String) combo2.getSelectedItem();
-        switch (s) {
-                case "BDT":
-                    a=a*105.5085;
-                    String s2=df.format(a);
-                    txf2.setText(s2+" TAKA");
-                    break;
+        String s1=txf.getText();
+            try {
+                double a=Double.parseDouble(s1);
+                if(s1.isEmpty()){
+                    label3.setText("Empty text-field !");
+                    txf2.setText(null);
                 }
+                else {
+                    label3.setText(null);
+                    switch (s) {
+                        case "BDT":
+                            a = a * 105.5085;
+                            String s2 = df.format(a);
+                            txf2.setText(s2 + " TAKA");
+                            break;
+                    }
+                }
+            } catch (NumberFormatException jj) {
+                label3.setText("Not a valid double value !");
+            }
         }
-   }
+        else if(e.getActionCommand().equals("Clear")){
+            txf.setText(null);
+            txf2.setText(null);
+        }
+    }
 }
 
 
