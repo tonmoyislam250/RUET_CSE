@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SnakeGame",
+            "request": "launch",
+            "mainClass": "SnakeGame",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch Moneyconverter",
+            "request": "launch",
+            "mainClass": "com.tonmoy.moneyconverter.Moneyconverter",
+            "projectName": "moneyconverter"
+        },
+        {
+            "type": "java",
+            "name": "Launch solve",
+            "request": "launch",
+            "mainClass": "solve",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Launch solve",
             "request": "launch",
             "mainClass": "solve",

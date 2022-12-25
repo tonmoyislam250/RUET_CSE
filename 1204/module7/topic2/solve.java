@@ -24,7 +24,7 @@ class B extends A implements BI {
 
 class C extends B implements CI {
     public void printC() {
-        System.out.println("Print class of B");
+        System.out.println("Print class of C");
     }
 }
 
