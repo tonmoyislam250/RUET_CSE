@@ -1,45 +1,42 @@
 package com.tonmoy.moneyconverter;
-
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.text.DecimalFormat;
 import javax.swing.*;
-
-public class myframe extends JFrame implements ActionListener {
-    JTextField txf = new JTextField();
+public class myframe extends JFrame implements ActionListener{
+    JTextField txf =new JTextField();
     private static final DecimalFormat df = new DecimalFormat("0.00");
-    JTextField txf2 = new JTextField();
+    JTextField txf2 =new JTextField();
     JLabel label = new JLabel("INPUT MONEY");
     JLabel label2 = new JLabel("OUTPUT MONEY");
-    JLabel label3 = new JLabel();
-    String[] choice = { "USD" };
-    String[] choice2 = { "BDT" };
+    JLabel label3= new JLabel();
+    String[] choice={"USD"};
+    String[] choice2={"BDT"};
     JComboBox<String> combo = new JComboBox<>(choice);
     JComboBox<String> combo2 = new JComboBox<>(choice2);
-    JButton b = new JButton("Convert");
-    JButton b2 = new JButton("Clear");
-
-    myframe() {
-        setSize(420, 420);
+    JButton b=new JButton("Convert");
+    JButton b2=new JButton("Clear");
+    myframe(){
+        setSize(420,420);
         setTitle("MoneyConverter");
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocation(650, 250);
+        setLocation(650,250);
         setResizable(false);
         getContentPane().setBackground(new Color(255, 213, 128));
-        txf.setBounds(30, 150, 100, 30);
-        txf2.setBounds(270, 150, 120, 30);
+        txf.setBounds(30,150,100,30);
+        txf2.setBounds(270,150,120,30);
         txf.setBackground(Color.cyan);
         txf2.setBackground(Color.cyan);
-        label.setBounds(30, 20, 100, 100);
-        label2.setBounds(270, 20, 100, 100);
+        label.setBounds(30,20,100,100);
+        label2.setBounds(270,20,100,100);
         label.setForeground(Color.BLUE);
         label2.setForeground(Color.BLUE);
-        combo.setBounds(30, 90, 80, 30);
+        combo.setBounds(30,90,80,30);
         combo.setBackground(Color.GREEN);
         combo2.setBackground(Color.GREEN);
-        combo2.setBounds(270, 90, 80, 30);
+        combo2.setBounds(270,90,80,30);
         b.setBounds(140, 230, 100, 30);
         b.setBackground(Color.GREEN);
         b.setForeground(Color.red);
@@ -62,19 +59,19 @@ public class myframe extends JFrame implements ActionListener {
         b.setActionCommand("button");
         b2.setActionCommand("Clear");
     }
-
     @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("button")) {
-            String s0 = (String) combo.getSelectedItem();
-            String s = (String) combo2.getSelectedItem();
-            String s1 = txf.getText();
+    public void actionPerformed(ActionEvent e){
+        if(e.getActionCommand().equals("button")){
+        String s0 = (String) combo.getSelectedItem();
+        String s = (String) combo2.getSelectedItem();
+        String s1=txf.getText();
             try {
-                double a = Double.parseDouble(s1);
-                if (s1.isEmpty()) {
+                double a=Double.parseDouble(s1);
+                if(s1.isEmpty()){
                     label3.setText("Empty text-field !");
                     txf2.setText(null);
-                } else {
+                }
+                else {
                     label3.setText(null);
                     switch (s) {
                         case "BDT":
@@ -85,11 +82,14 @@ public class myframe extends JFrame implements ActionListener {
                     }
                 }
             } catch (NumberFormatException jj) {
-                JOptionPane.showMessageDialog(this, "Not a valid amount of money!");
+                label3.setText("Not a valid double value !");
             }
-        } else if (e.getActionCommand().equals("Clear")) {
+        }
+        else if(e.getActionCommand().equals("Clear")){
             txf.setText(null);
             txf2.setText(null);
         }
     }
 }
+
+

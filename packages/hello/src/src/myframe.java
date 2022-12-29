@@ -1,10 +1,15 @@
-package com.tonmoy.moneyconverter;
+package src;
 
+import java.io.IOException;
+import java.util.*;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.text.DecimalFormat;
 import javax.swing.*;
+import org.json.JSONException;
+import org.json.JSONObject;
+import src.JsonReader;
 
 public class myframe extends JFrame implements ActionListener {
     JTextField txf = new JTextField();
@@ -13,9 +18,9 @@ public class myframe extends JFrame implements ActionListener {
     JLabel label = new JLabel("INPUT MONEY");
     JLabel label2 = new JLabel("OUTPUT MONEY");
     JLabel label3 = new JLabel();
-    String[] choice = { "USD" };
+    String[] choice;
     String[] choice2 = { "BDT" };
-    JComboBox<String> combo = new JComboBox<>(choice);
+    JComboBox<String> combo = new JComboBox<>(getStringList());
     JComboBox<String> combo2 = new JComboBox<>(choice2);
     JButton b = new JButton("Convert");
     JButton b2 = new JButton("Clear");
@@ -63,6 +68,21 @@ public class myframe extends JFrame implements ActionListener {
         b2.setActionCommand("Clear");
     }
 
+    String[] getStringList() throws JSONException, IOException {
+        JSONObject data = JsonReader
+                .readJsonFromUrl("https://v6.exchangerate-api.com/v6/4e5b7c421edf65ee9d1c525a/latest/USD");
+        Set<String> conversionRates = ((JSONObject) data.get("conversion_rates")).keySet();
+        String[] dataList = new String[conversionRates.size()];
+        System.out.println(conversionRates.size());
+        int i = 0;
+        for (Object conversionRate : conversionRates) {
+            dataList[i] = conversionRate.toString() + " : "
+                    + ((JSONObject) data.get("conversion_rates")).get((String) conversionRate);
+            i++;
+        }
+        return dataList;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("button")) {
@@ -85,7 +105,7 @@ public class myframe extends JFrame implements ActionListener {
                     }
                 }
             } catch (NumberFormatException jj) {
-                JOptionPane.showMessageDialog(this, "Not a valid amount of money!");
+                label3.setText("Not a valid double value !");
             }
         } else if (e.getActionCommand().equals("Clear")) {
             txf.setText(null);

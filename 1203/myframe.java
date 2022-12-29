@@ -1,4 +1,4 @@
-package com.tonmoy.moneyconverter;
+//Roll : 2003027
 
 import java.awt.Color;
 import java.awt.event.ActionListener;
@@ -85,7 +85,7 @@ public class myframe extends JFrame implements ActionListener {
                     }
                 }
             } catch (NumberFormatException jj) {
-                JOptionPane.showMessageDialog(this, "Not a valid amount of money!");
+                label3.setText("Not a valid double value !");
             }
         } else if (e.getActionCommand().equals("Clear")) {
             txf.setText(null);

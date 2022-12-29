@@ -1,14 +1,12 @@
-/* for naive search complexity is O(ab)
-for KMP its O(a+b)
- */
 #include <iostream>
 #include <cstring>
 using namespace std;
-void compute(char *s, int *LPS);
-void kmpsearch(char *s1, char *s2, int *LPS)
+void compute(string s, int *LPS);
+int kmpfrequency(string s1, string s2, int *LPS)
 {
-    int a = strlen(s1), b = strlen(s2), i = 0, j = 0;
+    int a = s1.length(), b = s2.length(), i = 0, j = 0;
     LPS[b];
+    int count = 0;
     compute(s2, LPS);
     while ((a - i) >= (b - j))
     {
@@ -19,7 +17,7 @@ void kmpsearch(char *s1, char *s2, int *LPS)
         }
         if (j == b)
         {
-            cout << "Pattern Found at index at : " << i - j;
+            count++;
             j = LPS[j - 1];
         }
         else if (s1[i] != s2[j])
@@ -30,10 +28,11 @@ void kmpsearch(char *s1, char *s2, int *LPS)
                 i++;
         }
     }
+    return count;
 }
-void compute(char *s, int *LPS)
+void compute(string s, int *LPS)
 {
-    int l = strlen(s), j = 0, i = 1;
+    int l = s.length(), j = 0, i = 1;
     LPS[0] = 0;
     while (i < l)
     {
@@ -56,14 +55,17 @@ void compute(char *s, int *LPS)
             }
         }
     }
-    for (int i = 0; i < l; i++)
-        cout << LPS[i] << " ";
-    cout << endl;
 }
 int main()
 {
-    char m[] = "ABABCABAB";
-    char n[] = "ABABDABACDABABCABAB";
-    int LPS[strlen(m)];
-    kmpsearch(n, m, LPS);
+    int t;
+    cin >> t;
+    for (int i = 1; i <= t; i++)
+    {
+        string n, m;
+        cin >> n;
+        cin >> m;
+        int LPS[m.length()];
+        cout << "Case " << i << ": " << kmpfrequency(n, m, LPS) << endl;
+    }
 }

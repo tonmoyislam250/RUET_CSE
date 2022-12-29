@@ -1,3 +1,9 @@
 {
-    "java.format.settings.url": "eclipse-formatter.xml"
+  "files.associations": {
+    "ostream": "cpp",
+    "bitset": "cpp",
+    "algorithm": "cpp",
+    "fstream": "cpp",
+    "iostream": "cpp"
+  }
 }
