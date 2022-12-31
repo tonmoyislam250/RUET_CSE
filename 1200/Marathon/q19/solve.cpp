@@ -1,20 +1,23 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 void solve()
 {
-    int n, w;
+    long long n, w;
     cin >> n >> w;
-    int a[n],jog[n];
-    for (int i = 0; i <n; i++)
+    long long a[n], jog[n];
+    memset(a, n, 0);
+    jog[0] = a[0];
+    for (int i = 1; i <= n; i++)
+    {
         cin >> a[i];
-        jog[i]
+        jog[i] = a[i] + jog[i - 1];
+    }
     while (w--)
     {
-        int k, l, sum = 0;
+        int k, l;
         cin >> k >> l;
-        for (int i = k-1; i <= l-1; i++)
-            sum += a[i];
-        cout << sum << endl;
+        cout << jog[l] - jog[k - 1] << endl;
     }
 }
 int main()
