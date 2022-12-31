@@ -41,27 +41,6 @@ void enqueue(int y)
         queue[rear] = y;
     }
 }
-void display()
-{
-    int i27 = front;
-    cout << "front = " << front << endl;
-    cout << "rear  = " << rear << endl;
-    cout << "| TC |-> ";
-    if (front == -1)
-    {
-        cout << "Queue is empty..." << endl;
-    }
-    else
-    {
-        while (i27 != rear)
-        {
-            cout << "| " << queue[i27] << "  ";
-            i27 = (i27 + 1) % 100;
-        }
-        cout << "| " << queue[i27] << "  ";
-        cout << "|" << endl;
-    }
-}
 int dequeue()
 {
     int x, y = 0;
@@ -104,21 +83,6 @@ void create_linked(int x)
         tail = tmp;
     }
 }
-void Display()
-{
-    node *temp = head;
-    if (head == NULL)
-    {
-        cout << "Can't Display nodes" << endl;
-    }
-    while (temp != NULL)
-    {
-        cout << temp->data << " ";
-        temp = temp->next;
-    }
-    cout << endl;
-}
-
 void create(int x)
 {
     node2 *q = new node2;
@@ -162,33 +126,7 @@ void create(int x)
         }
     }
 }
-void display3()
-{
-    stack<node2 *> st;
-    node2 *m = head2;
-    cout << "value "
-         << "own address "
-         << "left address "
-         << "Right address " << endl;
-    if (m == NULL)
-        cout << "Tree is Empty" << endl;
-    while (m != NULL || st.empty() != true)
-    {
-        if (m != NULL)
-        {
-            st.push(m);
-            m = m->prev;
-        }
-        else
-        {
-            m = st.top();
-            cout << m->data << " " << m << " " << m->prev << " " << m->next << endl;
-            st.pop();
-            m = m->next;
-        }
-    }
-    cout << endl;
-}
+
 
 int main()
 {
@@ -197,7 +135,6 @@ int main()
     {
         enqueue(ax[i27]);
     }
-    display();
     for (int i27 = 1; i27 <= 100; i27++)
     {
         int x = dequeue();
@@ -206,13 +143,10 @@ int main()
             create_linked(x);
         }
     }
-    Display();
-    display();
     node *temp = head;
     while (temp != NULL)
     {
         create(temp->data);
         temp = temp->next;
     }
-    display3();                                                                                                                                                                         
 }
