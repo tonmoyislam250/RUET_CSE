@@ -158,7 +158,7 @@ public:
 
 int main()
 {
-    EEE eee("EEE", 50, 1200, 50);
+    EEE eee("EEE", 50, 1000, 50);
     CSE cse("CSE", 30, 1200, 200);
     ECE ece("ECE", 30, 1200, 25, 100);
     eee.Display();
