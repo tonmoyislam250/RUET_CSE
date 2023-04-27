@@ -1,0 +1,1 @@
+{"name":"Local: c","url":"/home/tonmoyspark/Documents/app/Lab3/q1/c/c.cpp","tests":[{"id":1679135063599,"input":"5 5\n1 2 4 4 5\n1 3 6 5 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/tonmoyspark/Documents/app/Lab3/q1/c/c.cpp","group":"local","local":true}
