@@ -44,9 +44,8 @@ void genFile(long long arr[], long long n)
 
 int main()
 {
-    long long n, f;
-    cin >> n >> f;
-
+    long long n, f, off;
+    cin >> n >> f >> off;
     for (int i = 1; i <= f; i++)
     {
         long long arr[n];
@@ -57,6 +56,6 @@ int main()
         t = clock() - t;
         cout << "Time taken: " << float(t) / CLOCKS_PER_SEC << " seconds "
              << "for " << n << " Numbers" << endl;
-        n = (n + (n * 3));
+        n += off;
     }
 }
