@@ -1,11 +1,20 @@
+/*
+g++ .\q2\q2.cpp -o .\q2\q2.exe -I C:\Users\Tonmo\AppData\Local\Programs\Python\Python310\include
+-I include
+-I C:\Users\Tonmo\AppData\Local\Programs\Python\Python310\Lib\site-packages\numpy\core\include
+-L C:\Users\Tonmo\AppData\Local\Programs\Python\Python310\libs -lpython310
+*/
 #include <iostream>
 #include <fstream>
 #include <ctime>
+#include <vector>
+#include "matplotlibcpp.h"
 using namespace std;
+namespace plt = matplotlibcpp;
 void merger(long long a[], long long x, long long m, long long y)
 {
     long long i = 0, j = 0;
-    auto size1 = m - x + 1, size2 = y - m;
+    long long size1 = m - x + 1, size2 = y - m;
     long long *b = new long long[size1], *c = new long long[size2];
     while (i < size1)
     {
@@ -50,7 +59,7 @@ void merger(long long a[], long long x, long long m, long long y)
 
 void mergeSort(long long a[], long long x, long long y)
 {
-    auto m = x + (y - x) / 2;
+    long long m = x + (y - x) / 2;
     if (x < y)
     {
         mergeSort(a, x, m);
@@ -68,17 +77,17 @@ void genFile(long long arr[], long long n)
 {
     srand((unsigned)time(NULL));
 #ifdef _WIN32
-    system("del unsorteddata.txt");
+    system("del unsorteddata.data");
 #endif
 #ifdef linux
-    system("rm unsorteddata.txt");
+    system("rm unsorteddata.data");
 #endif
-    ofstream hello("unsorteddata.txt");
+    ofstream hello("unsorteddata.data");
     for (long long i = 0; i < n; i++)
-        hello << rand() % 100 << endl;
+        hello << rand() % 1000 << endl;
     hello.close();
-    ifstream hi("unsorteddata.txt");
-    for (int i = 0; i < n; i++)
+    ifstream hi("unsorteddata.data");
+    for (long long i = 0; i < n; i++)
         hi >> arr[i];
     // printarray(arr, n);
     hi.close();
@@ -88,9 +97,10 @@ int main()
 {
     long long n, f, off;
     cin >> n >> f >> off;
-    for (int i = 1; i <= f; i++)
+    std::vector<long long> x(f), y(f);
+    for (int i = 0; i < f; i++)
     {
-        long long arr[n];
+        long long *arr = new long long[n];
         genFile(arr, n);
         clock_t t;
         t = clock();
@@ -98,8 +108,14 @@ int main()
         // cout << endl;
         // printarray(arr, n);
         t = clock() - t;
-        cout << "Time taken: " << float(t) / CLOCKS_PER_SEC << " seconds "
+        cout << "Time taken: " << double(t) / CLOCKS_PER_SEC << " seconds "
              << "for " << n << " Numbers" << endl;
+        x.at(i) = n;
+        y.at(i) = t;
         n += off;
     }
+    plt::figure_size(1920, 1080);
+    plt::plot(x, y);
+    plt::title("Merge Sort Time Complexity Analysis O(nlogn)");
+    plt::show();
 }

@@ -1,7 +1,16 @@
+/*
+g++ .\q1\q1.cpp -o .\q1\q1.exe -I C:\Users\Tonmo\AppData\Local\Programs\Python\Python310\include
+-I include
+-I C:\Users\Tonmo\AppData\Local\Programs\Python\Python310\Lib\site-packages\numpy\core\include
+-L C:\Users\Tonmo\AppData\Local\Programs\Python\Python310\libs -lpython310
+*/
+#include "matplotlibcpp.h"
 #include <iostream>
 #include <fstream>
 #include <ctime>
+#include <vector>
 using namespace std;
+namespace plt = matplotlibcpp;
 void swap(long long *x, long long *y)
 {
     long long temp = *x;
@@ -46,9 +55,10 @@ int main()
 {
     long long n, f, off;
     cin >> n >> f >> off;
-    for (int i = 1; i <= f; i++)
+    std::vector<long double> x(f), y(f);
+    for (int i = 0; i < f; i++)
     {
-        long long arr[n];
+        long long *arr = new long long[n];
         genFile(arr, n);
         clock_t t;
         t = clock();
@@ -56,6 +66,12 @@ int main()
         t = clock() - t;
         cout << "Time taken: " << float(t) / CLOCKS_PER_SEC << " seconds "
              << "for " << n << " Numbers" << endl;
+        x.at(i) = n;
+        y.at(i) = t;
         n += off;
     }
+    plt::figure_size(1920, 1080);
+    plt::plot(x, y);
+    plt::title("Bubble Sort Time Complexity Analysis O(n^2)");
+    plt::show();
 }
