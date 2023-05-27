@@ -1,17 +1,15 @@
 #include <iostream>
 using namespace std;
-#define MAX 1000001
+#define MAX 100001
 void makespf(int a[], int n)
 {
     a[1] = 1;
     int ii = 0;
     int b[n];
-    for (int i = 2, j = 4; i < MAX, j < MAX; i++, j += 4)
-    {
+    for (int i = 2; i < MAX; i++)
         a[i] = i;
-        if (a[i] != i)
-            a[j] = 2;
-    }
+    for (int j = 4; j < MAX; j += 4)
+        a[j] = 2;
 
     for (int i = 3; i * i < MAX; i++)
     {
