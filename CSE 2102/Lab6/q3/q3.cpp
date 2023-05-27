@@ -3,6 +3,7 @@ using namespace std;
 
 int extend(int a, int b, int &x, int &y)
 {
+    cout << "a: " << a << " b: " << b << endl;
     if (b == 0)
     {
         x = 1;
@@ -11,10 +12,10 @@ int extend(int a, int b, int &x, int &y)
     }
     int x1, y1;
     int d = extend(b, a % b, x1, y1);
+    cout << "x1: " << x1 << " y1: " << y1 << endl;
     x = y1;
     y = x1 - y1 * (a / b);
-    // cout << "x1: " << x1 << " y1: " << y1 << " x: " << x << " y: " << y << " a: " << a << " b: " << b << " d: " << d << endl;
-    // cout << endl;
+    cout << "x: " << x << " y: " << y << endl;
     return d;
 }
 int main()
