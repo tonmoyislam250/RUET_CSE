@@ -8,7 +8,7 @@ void makespf(int a[], int n)
     int b[n];
     for (int i = 2; i < MAX; i++)
         a[i] = i;
-    for (int j = 4; j < MAX; j += 4)
+    for (int j = 4; j < MAX; j += 2)
         a[j] = 2;
 
     for (int i = 3; i * i < MAX; i++)

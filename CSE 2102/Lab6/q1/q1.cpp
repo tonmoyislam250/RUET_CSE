@@ -20,6 +20,7 @@ void sieveE(int a)
 int main()
 {
     int a;
+    cout << "Enter Number n: ";
     cin >> a;
     cout << "Prime numbers upto " << a << " are: " << endl;
     sieveE(a);
