@@ -4,9 +4,11 @@ using namespace std;
 int main()
 {
 	int c1 = 0;
+	int balls;
+	cout << "how many balls : ?";
+	cin >> balls;
 	while (c1 != 3)
 	{
-		int balls = 20;
 		cout << "Which player you want to play?\n1. player 1\n2. player 2\n3. Exit" << endl;
 		cin >> c1;
 		if (c1 == 1)
@@ -46,6 +48,7 @@ int main()
 			int i = 0;
 			while (i >= 0)
 			{
+				srand((unsigned int)time(NULL));
 				int take;
 				if (i == 0)
 					cout << "Computer is the first player" << endl;
@@ -62,11 +65,11 @@ int main()
 					break;
 				}
 				int take2 = 20;
-				while (take2 > 4|| take2 < 1)
+				while (take2 > 4 || take2 < 1)
 				{
 					cout << "\nHow many balls you want to take? (1-4) = ";
 					cin >> take2;
-					if (take2 > 4|| take2 < 1)
+					if (take2 > 4 || take2 < 1)
 						cout << "Invalid Balls taken" << endl;
 				}
 				balls = balls - take2;
