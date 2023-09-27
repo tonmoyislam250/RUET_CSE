@@ -30,12 +30,29 @@ using namespace std;
     cout.tie(NULL)
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
+int Jum(int a[], int n)
+{
+    int s = 0;
+    for (int i = 1; i <= n; i++)
+        s += a[i];
+    return s;
+}
+int Rsum(int a[], int k)
+{
+    if (k == 0)
+        return 0;
+    else
+        return a[k] + Rsum(a, k - 1);
+}
 
 void solve()
 {
-    int a, b;
-    cin >> a >> b;
-    cout << "sum = " << a + b << endl;
+    int k;
+    cin >> k;
+    int a[k];
+    for (int i = 1; i <= k; i++)
+        cin >> a[i];
+    cout << "sum = " << Jum(a, k) << endl;
 }
 
 int main()

@@ -1,3 +1,2 @@
-Case #1: sum = 30
-Case #2: sum = 70
-Run time: 26 microseconds
+Case #1: sum = 80
+Run time: 54 microseconds
