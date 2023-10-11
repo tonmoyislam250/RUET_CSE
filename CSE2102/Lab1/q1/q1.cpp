@@ -57,15 +57,20 @@ void solve()
 
 int main()
 {
+    long long size;
+    cin >> size;
+    srand(time(0));
+    ofstream output("input.txt");
+    output << size << endl;
+    for (int i = 0; i < size; i++)
+        output << rand() << " ";
+    output.close();
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
     auto start = std::chrono::high_resolution_clock::now();
-    fast_cin();
-    long long t;
-    cin >> t;
-    for (int it = 0; it < t; it++)
+    for (int it = 0; it < size; it++)
     {
         cout << "Case #" << it + 1 << ": ";
         solve();

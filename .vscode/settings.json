@@ -1,5 +1,10 @@
 {
-    "files.associations": {
-        "chrono": "cpp"
-    }
+  "files.associations": {
+    "chrono": "cpp",
+    "cmath": "cpp",
+    "iostream": "cpp",
+    "valarray": "cpp",
+    "fstream": "cpp",
+    "random": "cpp"
+  }
 }
