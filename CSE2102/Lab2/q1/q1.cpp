@@ -55,11 +55,6 @@ int main()
     long long n, target;
     cout << "How many Numbers : ";
     cin >> n;
-    string file = "search" + to_string(n) + ".txt";
-    ofstream input(file);
-    for (long long i = 0; i < n; i++)
-        input << rand() << " ";
-    input.close();
     cout << "Enter the target: ";
     cin >> target;
     long long result = linearSearch(n, target);
@@ -77,9 +72,7 @@ int main()
         cout << "Steps: " << count2 << endl;
     }
     else
-    {
         cout << "Element not found in the array." << std::endl;
-    }
 
     return 0;
 }
