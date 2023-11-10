@@ -50,10 +50,8 @@ long long linearSearch(long long size, long long target)
 
 int main()
 {
-    srand(time(0));
-    system("cls");
     long long n, target;
-    cout << "How many Numbers : ";
+    cout << "Which Dataset : ";
     cin >> n;
     cout << "Enter the target: ";
     cin >> target;
