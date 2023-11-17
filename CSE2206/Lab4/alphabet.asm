@@ -9,9 +9,7 @@ MAIN PROC
            INT 21H        ; read 1st char. & put it in BL
            MOV BL,AL
            INT 21H
-           MOV AH,1
-           MOV CL,AL
-           INT 21H        ;read 2nd char. in AL
+           MOV CL,AL       ;read 2nd char. in AL
 
            CMP BL,CL
            JG  SWITCH     ;if not orderd

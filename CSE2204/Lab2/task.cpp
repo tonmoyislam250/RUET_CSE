@@ -45,7 +45,7 @@ void method(int de, long double a, long double b, int h)
         i++;
     }
 
-    cout << "ANSWER : " << prev << endl;
+    cout << setprecision(5) << "ANSWER : " << prev << endl;
 }
 int main()
 {

@@ -1,9 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <chrono>
-#include <string>
-#include <cstdlib>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 
 void maxmin_brut(long long size)
@@ -54,19 +49,14 @@ void MaxMin(long long arr[], long long i, long long j, long long &max, long long
         MaxMin(arr, i, mid, max, min);
         MaxMin(arr, mid + 1, j, maxl, minl);
         if (max < maxl)
-        {
             max = maxl;
-        }
         if (min > minl)
-        {
             min = minl;
-        }
     }
 }
 int main()
 {
     srand(time(0));
-    system("cls");
     long long n, target, max, min;
     cout << "How many Numbers : ";
     cin >> n;
