@@ -44,7 +44,7 @@ void KnapSack(int P1[], int W[], int n, int M, int P2[], double X[], int P[])
                     X[i] = (float)M / W[i];
                 else
                     X[i] = M / W[i];
-                sum = sum + X[i] * P[i];
+                sum = sum + X[i] * P2[i];
                 M = M - X[i] * W[i];
                 prev = M;
                 c++;
@@ -73,5 +73,6 @@ int main()
     double PbyW[n];
     for (int i = 0; i < n; i++)
         PbyW[i] = (double)P1[i] / W1[i];
-    KnapSack(P1, W1, n, M, P2, X, P1);
+    // KnapSack(P1, W1, n, M, P2, X, P1);
+    KnapSack(W1, W1, n, M, P2, X, P1);
 }

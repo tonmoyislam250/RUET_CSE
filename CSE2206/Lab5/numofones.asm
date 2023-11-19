@@ -7,57 +7,64 @@
     COUNT DB 0
 .CODE
 MAIN PROC
-              MOV  AX,@DATA
-              MOV  DS,AX
-              MOV  BX,0
-              MOV  AH,1
-    WHILE_:   
-              INT  21H
-              CMP  AL,13D
-              JE   END_WHILE
-              AND  AL,15D
-              SHL  BX,1
-              OR   BL,AL
-              INC  COUNT
-              JMP  WHILE_
-    END_WHILE:
-              MOV  AH,9
-              LEA  DX,MSG2
-              INT  21h
+               MOV  AX,@DATA
+               MOV  DS,AX
+               LEA  DX,MSG1
+               MOV  AH,9
+               INT  21H
+               MOV  BX,0
+               MOV  AH,1
+               INT  21H
+    ENTER_BIN: 
+               CMP  AL, 20H
+               JE   END_BIN
+               AND  AL, 0FH
+               SHL  BX,1
+               OR   BL,AL
+               INT  21H
+               INC  COUNT
+               JMP  ENTER_BIN
+    END_BIN:   
 
-              MOV  CX,16
-              MOV  AH,2
-    ROLOOP:   
-              RCL  BX,1
-              JC   PRINT_ONE
-              MOV  DL,'0'
-              INT  21H
-              JMP  CONT
-    PRINT_ONE:
-              MOV  AH, 2
-              MOV  DL,'1'
-              INT  21H
-    CONT:     
-              LOOP ROLOOP
-              
-              MOV  AH,9
-              LEA  DX,MSG3
-              INT  21H
-              
-              XOR  AX,AX
-              MOV  CX,16
-    TOP:      
-              ROL  BX,1
-              JNC  NEXT
-              INC  AX
-    NEXT:     
-              LOOP TOP
+               MOV  AH,9
+               LEA  DX,MSG2
+               INT  21H
 
-              MOV  AH, 2
-              MOV  DL, AL
-              ADD  DL,'0'
-              INT  21H
-              MOV  AH, 4CH
-              INT  21H
+               MOV  CX,17
+               MOV  AH,2
+    ROLOOP:    
+               RCL  BX,1
+               JC   PRINT_ONE
+               JNC  PRINT_ZERO
+    PRINT_ONE: 
+               MOV  DL,'1'
+               INT  21H
+               JMP  CONTINUE
+    PRINT_ZERO:
+               MOV  DL,'0'
+               INT  21H
+               JMP  CONTINUE
+    CONTINUE:  
+               LOOP ROLOOP
+
+               MOV  AH,9
+               LEA  DX,MSG3
+               INT  21H
+              
+               XOR  AX,AX
+               MOV  CX,16
+    TOP:       
+               ROL  BX,1
+               JNC  NEXT
+               INC  AX
+    NEXT:      
+               LOOP TOP
+
+               MOV  AH, 2
+               MOV  DL, AL
+               ADD  DL,'0'
+               INT  21H
+               MOV  AH, 4CH
+               INT  21H
 MAIN ENDP
 END MAIN
