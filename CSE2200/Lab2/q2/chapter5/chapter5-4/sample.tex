@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{lipsum} % For dummy text
+
+\begin{document}
+
+\section{Page Breaking and Adjustment Example}
+
+\subsection{Manual Page Breaks}
+\lipsum[1-3] % Dummy text
+\newpage % Manual page break
+
+\subsection{Page Break with Clearpage}
+\lipsum[4-7] % Dummy text
+\clearpage % Page break with clearpage command
+
+\subsection{Preventing Page Breaks}
+\lipsum[8-9] % Dummy text
+\begin{samepage}
+    This content will not break across pages unless it exceeds the available space.
+\end{samepage}
+\lipsum[10-12] % More dummy text
+
+\subsection{Adjusting Page Break Penalties}
+\lipsum[13-16] % Dummy text
+\interlinepenalty=10000 % Set penalty for breaking between lines
+\lipsum[17-19] % More dummy text
+
+\subsection{Stretching Vertical Space}
+\lipsum[20-22] % Dummy text
+\vspace{\stretch{1}} % Stretch space to fill remainder of the page
+This space is stretched to fill the remaining space on the page.
+\vspace{\stretch{2}} % Stretch space to fill double the remaining space
+\clearpage % Manual page break
+
+\subsection{Customizing Page Layouts}
+\lipsum[23-25] % Dummy text
+\enlargethispage{\baselineskip} % Enlarge the page by one line
+\lipsum[26-28] % More dummy text
+
+\end{document}

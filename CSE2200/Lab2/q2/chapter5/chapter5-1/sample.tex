@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{geometry} % For adjusting page layout
+
+% Standard page layout setup
+\geometry{
+  a4paper, % Paper size
+  left=2.5cm, % Left margin
+  right=2.5cm, % Right margin
+  top=2.5cm, % Top margin
+  bottom=2.5cm, % Bottom margin
+}
+
+% Formatting page layout to show crop marks and a wider text area
+\geometry{
+  layout=a4paper, % Paper size
+  layoutwidth=21cm, % Width including the crop marks
+  layoutheight=29.7cm, % Height including the crop marks
+  layouthoffset=1.5cm, % Horizontal offset for crop marks
+  layoutvoffset=2cm, % Vertical offset for crop marks
+  showcrop, % Show crop marks
+}
+
+% Increasing the height of a page
+\usepackage{lipsum} % For dummy text
+\setlength{\textheight}{10in} % Increase text height
+
+\begin{document}
+
+\section{Standard Page Layout}
+This is the text on a page with standard layout.
+
+\section{Formatting Page Layout}
+This page has a wider text area with crop marks.
+
+\section{Increasing Page Height}
+\lipsum[1-10] % Dummy text to fill multiple pages
+
+\end{document}

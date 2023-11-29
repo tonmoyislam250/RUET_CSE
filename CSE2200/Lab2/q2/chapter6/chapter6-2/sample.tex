@@ -1,0 +1,31 @@
+\documentclass[a4paper]{article}
+
+\begin{document}
+
+\section{Tabbing Text Examples}
+
+\subsection{Tabbing Through the \texttt{tabbing} Environment}
+
+\begin{tabbing}
+    FirstColumn \= SecondColumn \= ThirdColumn \kill
+    One \> Two \> Three \\
+    First \> Second \> Third \\
+\end{tabbing}
+
+\subsection{Adjusting Column Width in the \texttt{tabbing} Environment}
+
+\begin{tabbing}
+    LongColumnName \= Short \= LongerColumnName \kill
+    ThisIsALongColumnName \> A \> B \\
+    ThisIsAReallyLongColumnName \> C \> D \\
+\end{tabbing}
+
+\subsection{Adjusting Alignment of Columns in the \texttt{tabbing} Environment}
+
+\begin{tabbing}
+    \= LeftAlignedColumn \= CenterAlignedColumn \= RightAlignedColumn \kill
+    \> Left \> Center \> Right \\
+    \> LeftAligned \> CenterAligned \> RightAligned \\
+\end{tabbing}
+
+\end{document}

@@ -1,78 +1,72 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
+#include <cstring>
+#include <fstream>
+#include<bits/stdc++.h>
 using namespace std;
-int asc[100], desc[100];
-void ascendingSort(int a[], int n)
+
+void Knapsack(double varArr[], double Profit[], double weight[], int n, int M, double X[], bool flag = false)
 {
-    for (int i = 0; i < n - 1; i++)
+    pair<double, int> items[n];
+    for (int i = 0; i < n; i++)
+        items[i] = make_pair(varArr[i], i);
+    for (int i = 0; i < n; i++)
+        cout << items[i].first << " " << weight[i] << " " << Profit[i] << endl;
+    if (flag == false)
+        sort(items, items + n); 
+    else if (flag == true)
+        sort(items, items + n, greater<pair<double, int>>());
+
+    int c = 0;
+    double sum = 0.0;
+    cout << "Ratio"
+         << " weight"
+         << " Profit\n";
+
+    while (M > 0 && c < n)
     {
-        int min = i;
-        for (int j = i; j < n; j++)
-            if (a[j] < a[min])
-                min = j;
-        swap(a[i], a[min]);
+        int i = items[c].second;
+        double taken = (M < weight[i]) ? M : weight[i];
+        X[i] = taken / weight[i];
+        sum += X[i] * Profit[i];
+        M -= taken;
+        c++;
     }
+    cout << "Selected fractions of items: ";
     for (int i = 0; i < n; i++)
-        asc[i] = a[i];
-}
-void descendingsort(int a[], int n)
-{
-    for (int i = 0; i < n - 1; i++)
     {
-        int max = i;
-        for (int j = i; j < n; j++)
-            if (a[j] > a[max])
-                max = j;
-        swap(a[i], a[max]);
-    }
-    for (int i = 0; i < n; i++)
-        desc[i] = a[i];
-}
-void KnapSack(int P1[], int W[], int n, int M, int P2[], double X[], int P[])
-{
-    int sum = 0, c = 0, prev = M;
-    for (int i = 0; i < n; i++)
-        P2[i] = P1[i];
-    descendingsort(P1, n);
-    while (M > 0)
-    {
-        for (int i = 0; i < n; i++)
-        {
-            if (P2[i] == desc[c])
-            {
-                cout << P2[i] << " " << M << endl;
-                if (M < W[i])
-                    X[i] = (float)M / W[i];
-                else
-                    X[i] = M / W[i];
-                sum = sum + X[i] * P2[i];
-                M = M - X[i] * W[i];
-                prev = M;
-                c++;
-                i++;
-                break;
-            }
-        }
-    }
-    for (int i = 0; i < n; i++)
         cout << X[i] << " ";
+        X[i] = 0.0;
+    }
     cout << endl;
-    cout << sum << endl;
+    cout << "Total profit: " << sum << endl;
 }
+
 int main()
 {
-    int n, M;
-    cin >> n;
-    cin >> M;
-    int P1[n], P2[n], W1[n], W2[n];
-    double X[n];
-    memset(X, 0, sizeof(X));
-    for (int i = 0; i < n; i++)
-        cin >> P1[i];
-    for (int i = 0; i < n; i++)
-        cin >> W1[i];
-    double PbyW[n];
-    for (int i = 0; i < n; i++)
-        PbyW[i] = (double)P1[i] / W1[i];
-    // KnapSack(P1, W1, n, M, P2, X, P1);
-    KnapSack(W1, W1, n, M, P2, X, P1);
+    ifstream inputFile("knapsack.txt");
+    int n, M, j = 1;
+
+    while (inputFile >> n >> M)
+    {
+        cout << "test case " << j++ << endl;
+        double P[n], W[n], X[n];
+        for (int i = 0; i < n; i++)
+            inputFile >> P[i];
+        for (int i = 0; i < n; i++)
+            inputFile >> W[i];
+        double PbyW[n];
+        for (int i = 0; i < n; i++)
+            PbyW[i] = (double)P[i] / W[i];
+        memset(X, 0.0, sizeof(X));
+        cout << "Case 1: Max Profit/Weight Ratio (Optimum Solution) \n";
+        Knapsack(PbyW, P, W, n, M, X, true);
+        // cout << "Case 2: Max Profit \n";
+        // Knapsack(P, P, W, n, M, X, true);
+        // cout << "Case 3: Less Weight \n";+
+        // Knapsack(W, P, W, n, M, X, false);
+        // cout << "Case 4: Max Weight\n";
+        // Knapsack(W, P, W, n, M, X, true);
+    }
+    return 0;
 }

@@ -1,0 +1,16 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{ulem}
+\begin{document}
+\underline{important}
+1. {\em Normal emphasized texts.}
+\ULforem % Redefining effects of {\em } and \emph{}.
+2. {\em Underlined texts with line breaks.}
+3. \emph{Yet underlined texts with line breaks.}
+4. {\it{\em Underlined texts in italic fonts …}}
+5. \textit{\emph{Yet underlined texts in …}}
+\normalem % For normal effects of {\em } and \emph{}.
+6. {\em Returned to normal emphasized texts.}
+7. The next phase is \uwave{wavy underlined.}
+8. The next phase is \sout{striked out statement.}
+9. The next phase is \xout{crossed out statement.}
+\end{document}

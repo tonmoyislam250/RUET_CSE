@@ -1,0 +1,24 @@
+PWD c:\Users\Tonmo\OneDrive\Documents\RUET_CSE\CSE2200\Lab2\nahin100 20-CSE2200 main LabClass2\6-6
+INPUT C:\Users\Tonmo\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\Users\Tonmo\OneDrive\Documents\RUET_CSE\CSE2200\Lab2\nahin100 20-CSE2200 main LabClass2\6-6\Table6_6.tex
+OUTPUT Table6_6.log
+INPUT C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex\latex\base\size11.clo
+INPUT C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex\latex\base\size11.clo
+INPUT C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex\latex\base\size11.clo
+INPUT C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT .\Table6_6.aux
+INPUT .\Table6_6.aux
+INPUT Table6_6.aux
+OUTPUT Table6_6.aux
+INPUT C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
+OUTPUT Table6_6.pdf
+INPUT C:\Users\Tonmo\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT Table6_6.aux
+INPUT C:\Users\Tonmo\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
+INPUT C:\Users\Tonmo\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
+INPUT C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb

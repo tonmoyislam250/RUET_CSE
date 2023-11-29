@@ -1,0 +1,24 @@
+# Fdb version 4
+["pdflatex"] 1701228210 "c:/Users/Tonmo/OneDrive/Documents/RUET_CSE/CSE2200/Lab2/q2/chapter5-2/sample.tex" "sample.pdf" "sample" 1701228211 0
+  "C:/Users/Tonmo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1701228209 126503 e611d436e1f2970a70bc85fad54ad7fa ""
+  "C:/Users/Tonmo/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1701178199 24213273 ba49bcdf43e47a3d1ed35d5efcde1663 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136765053 1288 655e228510b4c2a1abe905c368440826 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls" 1698826601 20144 fbcf51733730d8f1a62143512ff5b1fe ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo" 1698826601 8448 74078c4a887f2cdcd57c3ec111622740 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/tex/latex/fancyhdr/fancyhdr.sty" 1668504483 18450 88279bf67c81e69f8e3f1c1bad1a26c5 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1699552361 29988 6d57d2b884f7464419678df319af86d2 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty" 1699553168 6547 4212f386688ad9561172a8ee19d2b36f ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/l3keys2e/l3keys2e.sty" 1696961617 4674 15ab6bdfc97f65b00e59c2867851f715 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/tex/latex/lipsum/lipsum.ltd.tex" 1633253722 95525 6fd0552101a6b1f9b7a84b402ec435ba ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/tex/latex/lipsum/lipsum.sty" 1633253722 14690 c2c754218a7108db7823a4839c1bc3cd ""
+  "c:/Users/Tonmo/OneDrive/Documents/RUET_CSE/CSE2200/Lab2/q2/chapter5-2/sample.tex" 1701228203 613 af2dec7c283d518a850e9d8565171c5b ""
+  "sample.aux" 1701228211 138 61f7d6488293c39800f316421de4de0f "pdflatex"
+  "sample.tex" 1701228203 613 af2dec7c283d518a850e9d8565171c5b ""
+  (generated)
+  "sample.aux"
+  "sample.log"
+  "sample.pdf"
+  (rewritten before read)

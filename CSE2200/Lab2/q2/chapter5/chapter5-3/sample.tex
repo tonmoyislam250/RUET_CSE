@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{fancyheadings}
+\usepackage{lipsum} % For dummy text
+
+% headings style
+\pagestyle{headings}
+
+\begin{document}
+
+\section{Section with headings Style}
+\lipsum[1-5] % Dummy text to fill multiple pages
+
+\clearpage
+
+% myheadings style
+\pagestyle{myheadings}
+\markright{My Custom Header} % Set custom header
+
+\section{Section with myheadings Style}
+\lipsum[6-10] % Dummy text to fill multiple pages
+
+\clearpage
+
+% fancyheadings package
+\pagestyle{fancy}
+
+\lhead{Left Header}
+\rhead{Right Header}
+\lfoot{Left Footer}
+\rfoot{Right Footer}
+
+\section{Section with fancyheadings Package}
+\lipsum[11-15] % Dummy text to fill multiple pages
+
+\clearpage
+
+% fancyhdr package
+\pagestyle{fancy}
+
+\fancyhead[L]{Fancyhdr Left Header}
+\fancyhead[R]{Fancyhdr Right Header}
+\fancyfoot[L]{Fancyhdr Left Footer}
+\fancyfoot[R]{Fancyhdr Right Footer}
+
+\section{Section with fancyhdr Package}
+\lipsum[16-20] % Dummy text to fill multiple pages
+
+\end{document}

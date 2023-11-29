@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{lipsum} % For dummy text
+
+% Define a new page style
+\fancypagestyle{mystyle}{%
+  \fancyhf{} % Clear header and footer
+  \renewcommand{\headrulewidth}{2pt} % Header rule width
+  \renewcommand{\footrulewidth}{1pt} % Footer rule width
+  \fancyhead[C]{My Custom Header} % Header content in center
+  \fancyfoot[R]{\thepage} % Page number in the right footer
+}
+
+% Apply the new page style to the document
+\pagestyle{mystyle}
+
+\begin{document}
+
+\section{Page Style Example}
+\lipsum[1-10] % Dummy text to fill multiple pages
+
+\end{document}

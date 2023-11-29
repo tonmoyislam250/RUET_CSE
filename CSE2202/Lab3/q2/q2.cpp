@@ -14,7 +14,7 @@ void swap(long long *a, long long *b)
 long long partioner(long long a[], long long x, long long y)
 {
     long long p = a[y];
-    cout << "Pivot : " << p << endl;
+    // cout << "Pivot : " << p << endl;
     long long j = x, i = x - 1;
     while (j <= y - 1)
     {

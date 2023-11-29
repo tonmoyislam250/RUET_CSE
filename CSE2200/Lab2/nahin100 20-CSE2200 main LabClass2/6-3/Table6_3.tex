@@ -1,0 +1,35 @@
+\documentclass[11pt,a4paper]{article}
+%
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\renewcommand{\labelenumii}{(\Alph{enumii})}
+\renewcommand{\labelenumiii}{(\alph{enumiii})}
+\renewcommand{\labelenumiv}{(\roman{enumiv})}
+\renewcommand{\theenumi}{\arabic{enumi}}
+\renewcommand{\theenumii}{(\Alph{enumii})}
+\renewcommand{\theenumiii}{(\alph{enumiii})}
+\renewcommand{\theenumiv}{(\roman{enumiv})}
+%
+\begin{document}
+Some Asian countries and … listed below:
+    \begin{enumerate}
+    \item India\label{item:Ind}
+        \begin{enumerate}
+            \item Assam\label{item:Ass}
+            \begin{enumerate}
+                \item Sonitpur\label{item:Sonit}
+                \begin{enumerate}
+                    \item Tezpur\label{item:Tez}
+                    \item Dhekiajuli
+                    \item Balipara
+                \end{enumerate}
+                \item Kamrup
+                \item Cachar
+            \end{enumerate}
+            \item Bihar
+            \item Punjab
+        \end{enumerate}
+        \item Sri Lanka
+    \end{enumerate}
+    Place \ref{item:Tez} … district \ref{item:Sonit} in
+    state \ref{item:Ass} of country \ref{item:Ind}.
+\end{document}

@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{lipsum} % For dummy text
+
+\begin{document}
+
+\section{Page Numbering Examples}
+
+\subsection{Roman Page Numbering}
+\pagenumbering{roman} % Switch to Roman page numbering
+\setcounter{page}{1} % Start page numbering from 1
+\lipsum[1-5] % Dummy text
+
+\newpage
+
+\subsection{Arabic Page Numbering}
+\pagenumbering{arabic} % Switch to Arabic page numbering
+\setcounter{page}{1} % Start page numbering from 1 again
+\lipsum[6-10] % Dummy text
+
+\newpage
+
+\subsection{Custom Page Numbering}
+\renewcommand{\thepage}{A-\arabic{page}} % Custom page numbering format
+\setcounter{page}{1} % Start custom page numbering from 1
+\lipsum[11-15] % Dummy text
+
+\end{document}

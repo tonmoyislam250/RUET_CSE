@@ -1,0 +1,25 @@
+# Fdb version 4
+["pdflatex"] 1701235982 "c:/Users/Tonmo/OneDrive/Documents/RUET_CSE/CSE2200/Lab2/q3/sample.tex" "sample.pdf" "sample" 1701235982 0
+  "C:/Users/Tonmo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1701231688 126503 e611d436e1f2970a70bc85fad54ad7fa ""
+  "C:/Users/Tonmo/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1701178199 24213273 ba49bcdf43e47a3d1ed35d5efcde1663 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi8.tfm" 1136765053 1520 eccf95517727cb11801f4f1aee3a21b4 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr6.tfm" 1136765053 1300 b62933e007d01cfd073f79b963c01526 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr8.tfm" 1136765053 1292 21c1c5bfeaebccffdb478fd231a0997d ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy6.tfm" 1136765053 1116 933a60c408fc0a863a92debe84b2d294 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1247596667 32734 69e00a6b65cedb993666e42eedb3d48f ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls" 1698826601 20144 fbcf51733730d8f1a62143512ff5b1fe ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo" 1698826601 8448 74078c4a887f2cdcd57c3ec111622740 ""
+  "C:/Users/Tonmo/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1699552361 29988 6d57d2b884f7464419678df319af86d2 ""
+  "c:/Users/Tonmo/OneDrive/Documents/RUET_CSE/CSE2200/Lab2/q3/sample.tex" 1701235980 215 db7792afeb1de3563efe0cb257ecf41e ""
+  "sample.aux" 1701235982 68 af56f296e106f9eb3c5b1af7b63971ae "pdflatex"
+  "sample.tex" 1701235980 215 db7792afeb1de3563efe0cb257ecf41e ""
+  (generated)
+  "sample.aux"
+  "sample.log"
+  "sample.pdf"
+  (rewritten before read)

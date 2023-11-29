@@ -1,0 +1,57 @@
+\documentclass{article}
+
+\begin{document}
+
+\section{List Examples}
+
+\subsection{Numbered Listing - enumerate Environment}
+\subsubsection{Changing the Numbering Style I}
+\begin{enumerate}
+    \item First item
+    \item Second item
+    \item Third item
+\end{enumerate}
+
+\subsubsection{Changing the Numbering Style II}
+\begin{enumerate}
+    \renewcommand{\labelenumi}{\Roman{enumi}.} % Change numbering style to Roman numerals
+    \item First item
+    \item Second item
+    \item Third item
+\end{enumerate}
+
+\subsection{Unnumbered Listing - itemize Environment}
+\begin{itemize}
+    \item Apple
+    \item Banana
+    \item Orange
+\end{itemize}
+
+\subsection{Listing with User-Defined Labels - description Environment}
+\begin{description}
+    \item[LaTeX] A document preparation system
+    \item[PDF] Portable Document Format
+    \item[Texmaker] A LaTeX editor
+\end{description}
+
+\subsection{Nesting Different Listing Environments}
+\begin{enumerate}
+    \item First level item
+          \begin{itemize}
+              \item Nested item
+              \item Another nested item
+          \end{itemize}
+    \item Second level item
+          \begin{enumerate}
+              \item Sub-level item
+              \item Another sub-level item
+          \end{enumerate}
+\end{enumerate}
+
+\subsection{Indentation of Listed Items}
+\begin{itemize}
+    \item[] No indentation here (using \textbackslash item[])
+    \item Some content without indentation
+\end{itemize}
+
+\end{document}

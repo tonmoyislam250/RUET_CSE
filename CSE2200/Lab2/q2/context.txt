@@ -1,0 +1,66 @@
+#Chapter 2 (Font Selection)
+2.1 Text-Mode Fonts
+2.2 Math-Mode Fonts
+2.3 Emphasized Fonts
+2.4 Colored Fonts
+
+
+
+#Chapter 3 (Formatting Texts )
+3.1 Sectional Units
+3.2 Labeling and Referring Numbered Items
+3.3 Texts Alignment
+3.4 Quoted Texts
+3.5 New Lines and Paragraphs
+    3.5.1 Creating New Lines
+    3.5.2 Creating New Paragraphs
+3.6 Creating and Filling Blank Space
+3.7 Producing Dashes Within Texts
+3.8 Preventing Line Break∗
+3.9 Adjusting Blank Space After a Period Mark∗
+3.10 Hyphenating a Word∗
+
+
+
+#Chapter 4 (Formatting Texts II)
+4.1 Increasing Depth of Sectional Units∗
+4.2 Changing Titles and Counters of Sectional Units∗
+4.3 Multiple Columns
+    4.3.1 Multiple Columns Related Parameters
+    4.3.2 A Flexible Approach to Generate Multiple Columns
+4.4 Mini Pages
+4.5 Foot Notes
+    4.5.1 Foot Notes in Mini Pages∗
+    4.5.2 Altering the Pattern of Foot Notes∗
+4.6 Marginal Notes∗
+
+
+
+#Chapter 5 (Page Layout and Style)
+5.1 Page Layout
+    5.1.1 Standard Page Layout
+    5.1.2 Formatting Page Layout∗
+    5.1.3 Increasing the Height of a Page∗
+5.2 Page Style
+5.3 Running Header and Footer
+    5.3.1 Header with the headings Style
+    5.3.2 Header with the myheadings Style
+    5.3.3 Header and Footer with the fancy Style Under the fancyheadings Package∗
+    5.3.4 Header and Footer with the fancy Style Under the fancyhdr Package∗
+5.4 Page Breaking and Adjustment
+5.5 Page Numbering
+
+
+
+#Chapter 6 (Listing and Tabbing Texts)
+6.1 Listing Texts
+    6.1.1 Numbered Listing Through the enumerate Environment
+        6.1.1.1 Changing the Numbering Style I∗
+        6.1.1.2 Changing the Numbering Style II∗
+    6.1.2 Unnumbered Listing Through the itemize Environment
+    6.1.3 Listing with User-Defined Labels Through the description Environment
+    6.1.4 Nesting Different Listing Environments
+    6.1.5 Indentation of Listed Items∗
+6.2 Tabbing Texts Through the tabbing Environment
+    6.2.1 Adjusting Column Width in the tabbing Environment
+    6.2.2 Adjusting Alignment of Columns in the tabbing Environment∗
