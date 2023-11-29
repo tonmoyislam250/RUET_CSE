@@ -1,0 +1,160 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.28)  29 NOV 2023 14:11
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**c:/Users/Tonmo/OneDrive/Documents/RUET_CSE/CSE2200/Lab2/q5/sample.tex
+(c:/Users/Tonmo/OneDrive/Documents/RUET_CSE/CSE2200/Lab2/q5/sample.tex
+LaTeX2e <2023-11-01>
+L3 programming layer <2023-11-09>
+(C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+) (C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+) (C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count194
+\Gm@cntv=\count195
+\c@Gm@tempcnt=\count196
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
+\Gm@dimlist=\toks20
+ (C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty (C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty (C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2023-11-09 L3 programming layer (loader) 
+ (C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-11-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count197
+\l__pdf_internal_box=\box51
+))
+Package: l3keys2e 2023-10-10 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count198
+\l__lipsum_a_int=\count199
+\l__lipsum_b_int=\count266
+ (C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip50
+\f@nch@O@elh=\skip51
+\f@nch@O@erh=\skip52
+\f@nch@O@olh=\skip53
+\f@nch@O@orh=\skip54
+\f@nch@O@elf=\skip55
+\f@nch@O@erf=\skip56
+\f@nch@O@olf=\skip57
+\f@nch@O@orf=\skip58
+) (C:\Users\Tonmo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks21
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (sample.aux)
+\openout1 = `sample.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a5paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includefoot 
+* h-part:(L,W,R)=(56.9055pt, 307.28978pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 483.69687pt, 56.9055pt)
+* \paperwidth=421.10078pt
+* \paperheight=597.50787pt
+* \textwidth=307.28978pt
+* \textheight=453.69687pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+[1{C:/Users/Tonmo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+
+] (sample.aux)
+ ***********
+LaTeX2e <2023-11-01>
+L3 programming layer <2023-11-09>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 2004 strings out of 474586
+ 35540 string characters out of 5745680
+ 1927558 words of memory out of 5000000
+ 24219 multiletter control sequences out of 15000+600000
+ 561537 words of font info for 41 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 79i,11n,93p,290b,237s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Tonmo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Tonmo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Tonmo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk>
+Output written on sample.pdf (1 page, 16573 bytes).
+PDF statistics:
+ 61 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

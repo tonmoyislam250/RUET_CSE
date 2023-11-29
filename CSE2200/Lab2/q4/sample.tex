@@ -1,0 +1,34 @@
+\documentclass[a5paper, landscape]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{lipsum}
+
+\geometry{
+    paper=a5paper,
+    top=2cm,
+    bottom=2cm,
+    left=3cm,
+    right=3cm,
+    includefoot
+}
+
+\pagenumbering{roman}
+
+% Adjust the space between the top margin and chapter title
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-40pt}{20pt} % {left}{before}{after}
+
+\begin{document}
+
+\chapter{First Chapter}
+\section{Section One}
+\lipsum[1-2]
+
+\chapter{Second Chapter}
+\section{Section Two}
+\lipsum[3-4]
+
+\end{document}
