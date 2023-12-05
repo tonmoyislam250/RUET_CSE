@@ -1,8 +1,10 @@
 .MODEL SMALL
 .STACK 100H
 .DATA
-    isPrime  DB 'Prime$'
-    notPrime DB 'Not Prime$'
+    msg1     DB 'Enter a number: $'
+    msg2     DB 'The Entered Number is out of 16-bit range$'
+    isPrime  DB 'The Entered Number is Prime$'
+    notPrime DB 'The Entered Number is not Prime$'
 .CODE
 INDEC PROC
                 PUSH BX
@@ -10,7 +12,8 @@ INDEC PROC
                 PUSH DX
 @BEGIN:
                 MOV  AH, 2
-                MOV  DL, '?'
+                LEA  DX, msg1
+                MOv  AH,9
                 INT  21h
                 XOR  BX, BX
                 XOR  CX, CX
@@ -57,13 +60,12 @@ INDEC PROC
                 INT  21h
                 JMP  @BEGIN
 INDEC ENDP
-
 CHECK_PRIME PROC
                 MOV  CX, 2
-                MOV  DX, 0
                 CMP  AX, 1
                 JE   @NOT_PRIME
 @CHECK_DIVISOR:
+                MOV  DX, 0
                 MOV  BX, AX
                 DIV  CX
                 CMP  DX, 0
@@ -71,7 +73,7 @@ CHECK_PRIME PROC
                 INC  CX
                 MOV  AX, BX
                 CMP  CX, AX
-                JG   @IS_PRIME
+                JAE  @IS_PRIME
                 JMP  @CHECK_DIVISOR
 @IS_PRIME:
                 MOV  AH, 9
@@ -85,8 +87,6 @@ CHECK_PRIME PROC
 @EXIT2:
                 RET
 CHECK_PRIME ENDP
-
-
 MAIN PROC
                 MOV  AX, @DATA
                 MOV  DS, AX
