@@ -1,0 +1,27 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+\begin{document}
+
+    \setlength{\unitlength}{0.75mm}
+    \begin{picture}(60,30)(0,0)
+    \put(5,5){\line(0,1){20}}
+    \put(15,15){\line(1,0){20}}
+    \put(45,25){\line(1,-1){15}}
+    \end{picture}
+
+    \begin{picture}(120,60)(0,0)
+    \thicklines
+    \put(5,5){\vector(1,2){20}}
+    \put(75,15){\vector(-1,0){50}}
+    \put(115,55){\vector(-1,-2){25}}
+    \end{picture}
+
+    \setlength{\unitlength}{0.75mm}
+    \begin{picture}(60,30)(0,0)
+    \multiput(5,5)(5,10){3}{\line(1,0){20}}
+    \multiput(40,5)(7,2){3}{\vector(1,2){10}}
+    \end{picture}
+
+\end{document}

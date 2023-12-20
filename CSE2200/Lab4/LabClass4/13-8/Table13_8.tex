@@ -1,0 +1,45 @@
+\documentclass[a4paper]{article}
+\usepackage{float}
+\floatstyle{ruled}
+\newfloat{algorithm}{hbt}{alg}[section]
+\floatname{algorithm}{Algorithm}
+\floatstyle{boxed}
+\newfloat{program}{hbt}{prg}[section]
+\floatname{program}{Program}
+%
+\begin{document}
+…
+\section{Finding the maximum}
+The main steps … Algorithm~\ref{algo:max}.
+\begin{algorithm}
+\caption{Maximum of $n$ data points.}
+\label{algo:max}
+\begin{enumerate}
+\item Read the number of data points $n$.
+\item Read the data point $a_i$;
+$i=1$ to $n$.
+\item Set {\it max} $=a_1$.
+...
+\end{enumerate}
+\end{algorithm}
+%
+Algorithm~\ref{algo:max} is coded in the
+{\tt C} computer … Program~\ref{prog:max}.
+\begin{program}
+\caption{Maximum of $n$ data points.}
+\label{prog:max}
+\begin{verbatim}
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+int n, a[101];
+int i, max;
+printf("Number of points = ");
+...
+return(0);
+}
+\end{verbatim}
+\end{program}
+…
+\end{document}

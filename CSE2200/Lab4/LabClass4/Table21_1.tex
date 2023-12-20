@@ -1,0 +1,52 @@
+\documentclass{beamer}
+\usetheme{JuanLesPins}
+\usepackage[sort]{natbib}
+% Components of the title page
+\title[\LaTeX\ in 24H]{\LaTeX\ in Twenty Four Hours}
+\subtitle{A Practical Guide for Scientific Writing}
+\author[D. Datta]{Dilip Datta}
+\institute[\LaTeX-LT]{\LaTeX\ Learners Team}
+\date[L24H :: 21-06-2016]{June 21, 2016}
+\titlegraphic{\includegraphics[width=20mm]{logo_LA}}
+%
+\begin{document}
+    % Frame 1
+    \frame[plain]{\titlepage}
+    % Frame 2
+    \section*{Outline}
+    \frame[t]{ \frametitle{Presentation outline} \tableofcontents }
+    % Frames 3 and 4
+    \section[Introduction]{Introduction to \LaTeX}
+    \subsection[Definition]{Definition of \LaTeX}
+    \frame[t]
+    { \frametitle{Introduction to \LaTeX} \framesubtitle{What is \LaTeX?}
+    \begin{itemize}
+    \item \LaTeX\ is a macro-package for typesetting documents.
+    \item \LaTeX\ instructions are interspersed with …
+    \item \LaTeX\ input files have .tex extension.
+    \item \LaTeX\ output can be obtained in .dvi or .pdf format.
+    \end{itemize}
+    }
+    \subsection[Resources]{Resources on \LaTeX}
+    \begin{frame}[t]
+    \frametitle{Introduction to \LaTeX} \framesubtitle{Some popular books on \LaTeX}
+    \begin{enumerate}
+    \item The \LaTeX\ Companion by \citet{Datta-Figueira-2013}
+    \item A Guide to \LaTeX2$_\varepsilon$ by \citet{Deb-2001}
+    \item \LaTeX: User's Guide and Reference Manual by \citet{Burke-etal-1996}
+    \end{enumerate}
+    \end{frame}
+    % Frame 5
+    \section*{ }
+    \begin{frame}[t]
+    \frametitle{References}
+    \bibliographystyle{apalike} 
+    \bibliography{mybib2}
+    \end{frame}
+    % Frame 6
+    \section*{ }
+    \begin{frame}
+    \begin{center}
+    \Large{\bf\textcolor{blue}{Thanks a lot}}\\[5mm] … \end{center}
+    \end{frame}
+\end{document}

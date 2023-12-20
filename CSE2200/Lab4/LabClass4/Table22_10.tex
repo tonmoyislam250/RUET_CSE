@@ -1,0 +1,42 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usepackage{tabularx}
+
+% Components of the title page
+\title[\LaTeX\ in 24H]{\LaTeX\ in Twenty Four Hours}
+\subtitle{A Practical Guide for Scientific Writing}
+\author[D. Datta]{Dilip Datta}
+
+%
+\begin{document}
+ 
+    \begin{frame}[t]
+        \frametitle{Result}
+        % Example 1
+        \only<1-2> {\color<1-2>[rgb]{1,0.3,0.5}{First year}}
+        \only<2> {\color<2>[rgb]{1,0.3,0.5}{
+        \begin{table}
+        \flushleft
+        \begin{tabular}{cccc}
+        \hline & {\bf Total} & {\bf Passed} & {\bf Pass rate}\\
+        \hline Boys & 56 & 50 & 89.3\%\\
+        Girls & 38 & 36 & 94.7\%\\
+        \hline
+        \end{tabular}
+        \end{table} }}
+        % Example 2
+        \onslide<3-> {\color<3->[rgb]{1,0.3,0.5}{Second year}}
+        \onslide<4-> {\color<4->[rgb]{0,0,0}{
+        \begin{table}
+        \begin{tabularx}{\linewidth}{XXXX}
+        \hline & {\bf Total}& {\bf Passed}& {\bf Pass rate}\\
+        \hline \uncover<5->{\alert<5>{Boys}}& \uncover<5->{\alert<5>{52}}&
+        \uncover<5->{\alert<5>{49}}& \uncover<5->{\alert<5>{94.2\%}}\\
+        \uncover<6>{\alert<6>{Girls}}& \uncover<6>{\alert<6>{46}}&
+        \uncover<6>{\alert<6>{41}}& \uncover<6>{\alert<6>{89.1\%}}\\
+        \hline
+        \end{tabularx}
+        \end{table} }}
+    \end{frame}
+
+\end{document}

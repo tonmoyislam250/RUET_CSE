@@ -1,0 +1,31 @@
+\documentclass[a4paper]{article}
+\usepackage{tabularx}
+
+%
+\begin{document}
+
+    \begin{table}[!hbt]
+        \begin{tabularx}{\linewidth}{|l|X|c|}
+            \hline Semester& Subject-wise score& Total\\
+            \hline First& {
+            \begin{tabularx}{\linewidth}{X|c}
+            English & 69\\
+            Science & 80\\
+            Drawing & 92
+            \end{tabularx}
+            }& 241\\
+            \hline Second& {
+            \begin{tabularx}{\linewidth}{X|c}
+            English & 77\\
+            Science & 85\\
+            Mathematics & 83\\
+            History & 64
+            \end{tabularx}
+            }& 309\\
+            \hline
+            \multicolumn{2}{|r|}{Grand Total}& 550\\
+            \hline
+        \end{tabularx}
+    \end{table}
+
+\end{document}

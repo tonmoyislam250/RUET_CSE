@@ -1,66 +1,73 @@
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 
 using namespace std;
 
-const int MAXN = 100005;
-vector<int> tree[MAXN];
-int subtreeSize[MAXN];
-
-void calculateSubtreeSizes(int node, int parent)
+struct Node
 {
-    subtreeSize[node] = 1;
-    for (int child : tree[node])
+    int weight;
+    vector<pair<int, int>> children; // child node, edge weight
+};
+
+void addEdge(unordered_map<int, Node> &tree, int u, int v, int w)
+{
+    tree[u].children.emplace_back(v, w);
+    tree[v].children.emplace_back(u, w); // Adding for undirected tree
+}
+
+void TVS(unordered_map<int, Node> &tree, int node, unordered_map<int, int> &d, int parentWeight, int limit, vector<int> &result)
+{
+    if (node == 0)
     {
-        if (child != parent)
+        d[node] = 0;
+    }
+    for (auto &child : tree[node].children)
+    {
+        int v = child.first;
+        int w = child.second;
+        if (v != parentWeight)
         {
-            calculateSubtreeSizes(child, node);
-            subtreeSize[node] += subtreeSize[child];
+            TVS(tree, v, d, node, limit, result);
+            d[node] = max(d[node], d[v] + w);
         }
+    }
+    if (node != 0 && (d[node] > limit))
+    {
+        result.push_back(node);
+        d[node] = 0;
     }
 }
 
-int findCentroid(int node, int parent, int treeSize)
+vector<int> splitVertices(unordered_map<int, Node> &tree, int limit)
 {
-    for (int child : tree[node])
-    {
-        if (child != parent && subtreeSize[child] > treeSize / 2)
-        {
-            return findCentroid(child, node, treeSize);
-        }
-    }
-    return node;
-}
-
-void decomposeTree(int node, int parent)
-{
-    calculateSubtreeSizes(node, -1);
-    int centroid = findCentroid(node, -1, subtreeSize[node]);
-
-    for (int child : tree[centroid])
-    {
-        tree[child].erase(find(tree[child].begin(), tree[child].end(), centroid));
-        decomposeTree(child, centroid);
-    }
-    tree[centroid].clear();
+    vector<int> result;
+    unordered_map<int, int> d;
+    TVS(tree, 0, d, -1, limit, result);
+    return result;
 }
 
 int main()
 {
-    int n;
-    cout << "Enter the number of nodes in the tree: ";
-    cin >> n;
+    unordered_map<int, Node> tree;
+    addEdge(tree, 0, 1, 4);
+    addEdge(tree, 0, 2, 2);
+    addEdge(tree, 1, 3, 2);
+    addEdge(tree, 2, 4, 1);
+    addEdge(tree, 2, 5, 3);
+    addEdge(tree, 3, 6, 1);
+    addEdge(tree, 3, 7, 4);
+    addEdge(tree, 5, 8, 2);
+    addEdge(tree, 5, 9, 3);
 
-    cout << "Enter the tree edges (node1 node2):" << endl;
-    for (int i = 1; i < n; ++i)
+    vector<int> result = splitVertices(tree, 5);
+
+    cout << "Vertices to split: ";
+    for (int v : result)
     {
-        int u, v;
-        cin >> u >> v;
-        tree[u].push_back(v);
-        tree[v].push_back(u);
+        cout << v << " ";
     }
-
-    decomposeTree(1, -1);
+    cout << endl;
 
     return 0;
 }
