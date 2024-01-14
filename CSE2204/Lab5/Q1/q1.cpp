@@ -14,6 +14,7 @@ double integration(double h, int y, int a, int b)
         if (y == 1)
         {
             x = x + h;
+            cout << x << " " << funk(x) << endl;
             sum += 2 * funk(x);
         }
         else if (y == 2)
@@ -21,11 +22,13 @@ double integration(double h, int y, int a, int b)
             if (i % 2 == 0)
             {
                 x = x + h;
+                cout << x << " " << funk(x) << endl;
                 sum += 2 * funk(x);
             }
             else if (i % 2 != 0)
             {
                 x = x + h;
+                cout << x << " " << funk(x) << endl;
                 sum += 4 * funk(x);
             }
         }
@@ -34,11 +37,13 @@ double integration(double h, int y, int a, int b)
             if (i % 3 == 0)
             {
                 x = x + h;
+                cout << x << " " << funk(x) << endl;
                 sum += 2 * funk(x);
             }
             else if (i % 3 != 0)
             {
                 x = x + h;
+                cout << x << " " << funk(x) << endl;
                 sum += 3 * funk(x);
             }
         }
@@ -57,9 +62,9 @@ int main()
     cout << "enter the interval, LL, HL: ";
     cin >> h >> a >> b;
     double re = integration(h, 1, a, b);
+    double re2 = integration(h, 2, a, b);
+    double re3 = integration(h, 3, a, b);
     cout << "The area value of 1/(1+x) by trapizoidal is = " << re << endl;
-    re = integration(h, 2, a, b);
-    cout << "The area value of 1/(1+x) by simpson's 1/3 rule is = " << re << endl;
-    re = integration(h, 3, a, b);
-    cout << "The area value of 1/(1+x) by simpson's 3/8 rule is = " << re << endl;
+    cout << "The area value of 1/(1+x) by simpson's 1/3 rule is = " << re2 << endl;
+    cout << "The area value of 1/(1+x) by simpson's 3/8 rule is = " << re3 << endl;
 }
