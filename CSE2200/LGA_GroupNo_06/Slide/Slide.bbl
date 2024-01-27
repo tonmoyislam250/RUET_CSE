@@ -1,0 +1,48 @@
+\begin{thebibliography}{1}
+
+\bibitem{alkharabsheh2013review}
+Khalid Suleiman et~al. Al-Kharabsheh.
+\newblock Review on sorting algorithms: A comparative study.
+\newblock {\em International Journal of Computer Science and Security (IJCSS)},
+  2013.
+
+\bibitem{anderson1998implementing}
+Arne Anderson and S.~N.
+\newblock Implementing radix sort.
+\newblock {\em Experimental Algorithmic (JEA)}, 1998.
+
+\bibitem{hammad2015comparative}
+J.~Hammad.
+\newblock A comparative study between various sorting algorithms.
+\newblock 15(March):6, 2015.
+\newblock March.
+
+\bibitem{khairullah2013enhancing}
+Md. Khairullah.
+\newblock Enhancing worst sorting algorithms.
+\newblock {\em International Journal of Advanced Science and Technology}, 2013.
+
+\bibitem{jain2015bitonic}
+S.~K.~P. Megha~Jain.
+\newblock Bitonic sorting algorithm: A review.
+\newblock Volume 113 - No. 13:2, 2015.
+\newblock March.
+
+\bibitem{sahni2011gpu}
+S.~B. Sahni.
+\newblock Gpu radix sort for.
+\newblock {\em IEEE}, 2011.
+
+\bibitem{shukla2012review}
+Avinash Shukla and A.~K. K.~S.
+\newblock Review of radix sort \& proposed modified radix sort for
+  heterogeneous data set in distributed computing environment.
+\newblock {\em Journal Name}, 2(5):6, 2012.
+
+\bibitem{verma2013new}
+A.~K. Verma.
+\newblock A new approach for sorting list to reduce execution time.
+\newblock page~7, 2013.
+\newblock 13 October.
+
+\end{thebibliography}

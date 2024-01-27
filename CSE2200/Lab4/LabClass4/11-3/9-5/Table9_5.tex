@@ -1,0 +1,30 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+\begin{document}
+
+\begin{figure}[!htb]
+    \centering
+    \subfigure[A girl.]
+    { \includegraphics[width=2.0cm]{girl}
+        \label{girl}
+    }\hfill
+    \subfigure[A flower.]
+    { \includegraphics[width=2.0cm]{flower}
+        \label{flower}
+    }\\
+    \subfigure[A finger work.]
+    { \includegraphics[width=4.0cm]{finger}
+        \label{finger-work}
+    }
+    \caption{Girl, flower and finger work.}
+    \label{girl_flower_finger}
+\end{figure}
+%
+In Figure \ref{girl_flower_finger}, \ref{girl}
+and \ref{flower} display a girl and a flower,
+while \ref{finger-work} displays a beautiful finger
+work.
+
+\end{document}

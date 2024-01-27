@@ -1,0 +1,20 @@
+\begin{thebibliography}{}
+
+\bibitem[Burke et~al., 1996]{Burke-etal-1996}
+Burke, E., Elliman, D., and Weare, P. F.~R. (1996).
+\newblock {Examination Timetabling in British Universities - A Survey}.
+\newblock In Burke, E.~K. and Ross, P., editors, {\em Proceedings of Practice
+  and Theory of Automated Timetabling}, volume 1153 of {\em Lecture Notes in
+  Computer Science (LNCS)}, pages 76--90. Springer.
+
+\bibitem[Datta and Figueira, 2013]{Datta-Figueira-2013}
+Datta, D. and Figueira, J.~R. (2013).
+\newblock {A real-integer-discrete-coded differential evolution}.
+\newblock {\em Applied Soft Computing}, 13(9):3884--3893.
+
+\bibitem[Deb, 2001]{Deb-2001}
+Deb, K. (2001).
+\newblock {\em {Multi-Objective Optimization using Evolutionary Algorithms}}.
+\newblock John Wiley \& Sons Ltd., Chichester, England.
+
+\end{thebibliography}

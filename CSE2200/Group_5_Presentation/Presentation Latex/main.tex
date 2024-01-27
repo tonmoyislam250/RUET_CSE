@@ -1,0 +1,64 @@
+\documentclass{beamer}
+\usepackage{amsfonts,amsmath,oldgerm}
+\usepackage{tikz}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\usetheme{_statale}
+\usefonttheme[onlymath]{serif}
+
+\newcommand{\testcolor}[1]{\colorbox{#1}{\textcolor{#1}{test}}~\texttt{#1}}
+\newcommand{\hrefcol}[2]{\textcolor{cyan}{\href{#1}{#2}}}
+\titlebackground*{assets/background}
+
+\setbeamerfont{title}{size=\LARGE}
+\setbeamerfont{subtitle}{size=\Large}
+\setbeamerfont{author}{size=\normalsize}
+\title{Comperative Analysis of Insertion Sort and Quick Sort}
+\subtitle{\vspace{0.4cm}Prepared by-\vspace{0.2cm}}
+\author{Taki Tamin (2003002) \\
+        Fazle Rabby (2003004) \\
+        Moloy Kumar Das (2003012) \\
+        Rakibul Hasan Durjoy (2003018) \\
+        Md. Rashedul Islam (2003023) \\
+        Md. Shefat Hossen Shoikat (2003045) \\
+}
+
+\lstdefinestyle{cppStyle}{
+    language=C++,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{orange},
+    showstringspaces=false,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny,
+    numbersep=5pt,
+    tabsize=2,
+}
+
+
+
+\begin{document}
+\maketitle
+
+%\footlinecolor{maincolor}
+
+\input{sections/introduction}
+\input{sections/Background Study}
+
+\input{sections/comparison}
+\input{sections/Conclusion}
+\backmatter
+%\input{sections/References}
+\bibliographystyle{ieeetr}
+\bibliography{assets/mybib} 
+
+\end{document}

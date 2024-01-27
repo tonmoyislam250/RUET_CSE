@@ -1,0 +1,34 @@
+%Tonmoy-2003027
+\documentclass{article}
+\usepackage{tabularx}
+
+\begin{document}
+
+This research work is focused on detecting low-grade glioma tumorous cells in MRI images. Glioma is a common brain tumor, that exhibits properties of benign tumors \cite{1}. We used the TCGA-LGG Segmentation dataset \cite{2} for our research. It consists of 3929 brain tumor images and corresponding FLAIR abnormality segmentation masks obtained from 110 patients.\newline Table 1 lists the models used as encoder for U-Net architecture.
+
+\begin{table}[h]
+    \centering
+    \begin{tabularx}{\textwidth}{|X|X|X|}
+        \hline
+        \textbf{Family} & \textbf{Models}          & \textbf{Trainable Blocks} \\
+        \hline
+        EfficientNet    & EfficientNetB0 to B7     & Block 30 to 32            \\
+        \hline
+        DenseNet        & DenseNet169, DenseNet201 & Block 7                   \\
+        \hline
+        ResNet          & ResNet18, ResNe50t50     & Stage 4                   \\
+        \hline
+    \end{tabularx}
+    \caption{Models used for U-Net encoder and trainable blocks/stages for fine-tuning.}
+    \label{tab:my_label}
+\end{table}
+
+\begin{thebibliography}{9}
+    \bibitem{1}
+    A. Wadhwa, A. Bhardwaj,, V.S Verma "A review on brain tumor segmentation of mri images," Magnetic resonance imaging vol.61 pp. 247-259,2019.
+
+    \bibitem{2}
+    M. Buda, A. Saha, and M. A. Mazurowski, "Association of genomic subtypes of lower-grade gliomas with shape features automatically extracted by a deep learning algorithm," Computers in biology and medicine, vol. 109, pp. 218- 225, 2019
+\end{thebibliography}
+
+\end{document}
