@@ -16,7 +16,10 @@ SELECT Director_Name, Birth_Year FROM Director WHERE Director_Name LIKE '%a_';
 SELECT Movie_Name, Year AS Release_Year, Genre FROM Movie WHERE Movie_Name LIKE '%Byomkesh%';
 -- ❖ Query 1.9: Find the name and IMDB rating of all the movies whose name consists of only 2 characters.
 SELECT Movie_Name, IMDB_Rating FROM Movie WHERE LENGTH(Movie_Name) = 2;
+SELECT Movie_Name, IMDB_Rating FROM Movie WHERE Movie_Name LIKE '__';
 -- ❖ Query 1.10: Find the name and genre of all the movies whose name consists of at least 3 characters.
 SELECT Movie_Name, Genre FROM Movie WHERE LENGTH(Movie_Name) >= 3;
+SELECT Movie_Name, Genre FROM Movie WHERE Movie_Name LIKE '___%';
 -- ❖ Query 1.Last: Find the name and IMDB rating of all the movies which contain at most 9 characters in their name.
 SELECT Movie_Name, IMDB_Rating FROM Movie WHERE LENGTH(Movie_Name) <= 9;
+SELECT Movie_Name, IMDB_Rating FROM Movie WHERE Movie_Name NOT LIKE '__________%';
