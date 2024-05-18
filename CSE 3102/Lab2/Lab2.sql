@@ -7,7 +7,8 @@ SELECT Actor_Name, (YEAR(CURRENT_DATE) - Birth_Year) AS Current_Age FROM Actor;
 -- ❖ Query 1.4: Find all the movies of the thriller genre with an IMDB rating greater than or equal to 8.0.
 SELECT Movie_Name, Genre, IMDB_Rating FROM Movie WHERE Genre = 'Thriller' AND IMDB_Rating >= 8.0;
 -- ❖ Query 1.5: Find the name, release year, IMDB rating, and the name of the director of all the movies.
-SELECT m.Movie_Name, m.Year AS Release_Year, m.IMDB_Rating, d.Director_Name AS Director_Name FROM Movie m JOIN Director d ON m.Director_ID = d.Person_ID;
+SELECT m.Movie_Name, m.Year AS Release_Year, m.IMDB_Rating, d.Director_Name AS Director_Name 
+FROM Movie m JOIN Director d ON m.Director_ID = d.Person_ID;
 -- ❖ Query 1.6: Find the name and number of awards of those directors whose name starts with a ‘S’ or a ‘A’.
 SELECT Director_Name, No_Of_Awards FROM Director WHERE Director_Name LIKE 'S%' OR Director_Name LIKE 'A%';
 -- ❖ Query 1.7: Find the name and birth year of those directors whose name contains an ‘a’ as its 2nd last character.

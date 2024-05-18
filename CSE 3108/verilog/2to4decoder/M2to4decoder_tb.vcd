@@ -1,0 +1,44 @@
+$date
+	Sat May 18 11:39:52 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module M2to4decoder_tb $end
+$var wire 4 ! out [3:0] $end
+$var reg 2 " in [1:0] $end
+$scope module uut $end
+$var wire 2 # in [1:0] $end
+$var wire 4 $ out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1 $
+b0 #
+b0 "
+b1 !
+$end
+#10
+b10 !
+b10 $
+b1 "
+b1 #
+#20
+b100 !
+b100 $
+b10 "
+b10 #
+#30
+b1000 !
+b1000 $
+b11 "
+b11 #
+#40

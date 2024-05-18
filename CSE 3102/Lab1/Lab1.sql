@@ -1,4 +1,4 @@
---Create Table Director
+-- Create Table Director
 
 -- CREATE TABLE Director (
 --     Person_ID INT,
@@ -21,7 +21,7 @@
 --     (7, 'Aparna Sen', 1945, 12, 7),
 --     (8, 'Kaushik Ganguly', 1968, 23, 30)
 
---Create Table Actor
+-- Create Table Actor
 
 -- CREATE TABLE Actor (
 --     Person_ID INT,
@@ -32,7 +32,7 @@
 --     PRIMARY KEY (Person_ID)
 -- );
 
---Insert into Actor
+-- Insert into Actor
 
 -- INSERT INTO Actor (Person_ID, Actor_Name, Birth_Year, No_Of_Films, No_Of_Awards)
 -- VALUES
@@ -44,7 +44,7 @@
 --     (10, 'Soumitra Chatterjee', 1935, 250, 220),
 --     (4, 'Anjan Dutt', 1953, 39, 10)
 
---Create Table Movie
+-- Create Table Movie
 
 -- CREATE TABLE Movie (
 --     Movie_ID INT PRIMARY KEY,
@@ -56,7 +56,7 @@
 --     FOREIGN KEY (Director_ID) REFERENCES Director(Person_ID)
 -- );
 
---Insert into Movie
+-- Insert into Movie
 
 -- INSERT INTO Movie (Movie_ID, Movie_Name, Genre, Year, IMDB_Rating, Director_ID)
 -- VALUES
