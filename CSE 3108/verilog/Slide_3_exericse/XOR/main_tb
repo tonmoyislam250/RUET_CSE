@@ -1,0 +1,72 @@
+#! /mingw64/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\msys64\mingw64\lib\ivl\system.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\va_math.vpi";
+S_0000000001049340 .scope module, "testbench" "testbench" 2 1;
+ .timescale 0 0;
+v00000000006469f0_0 .var "X", 0 0;
+v0000000000646a90_0 .var "Y", 0 0;
+v0000000000646b30_0 .net "Z", 0 0, L_0000000000646bd0;  1 drivers
+S_00000000006493e0 .scope module, "uut" "boolean_equation" 2 7, 3 1 0, S_0000000001049340;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "X";
+    .port_info 1 /INPUT 1 "Y";
+    .port_info 2 /OUTPUT 1 "Z";
+L_00000000006497f0 .functor AND 1, v00000000006469f0_0, v0000000000646a90_0, C4<1>, C4<1>;
+L_00000000010494d0 .functor NOT 1, v00000000006469f0_0, C4<0>, C4<0>, C4<0>;
+L_0000000000616ba0 .functor NOT 1, v0000000000646a90_0, C4<0>, C4<0>, C4<0>;
+L_0000000000616fe0 .functor AND 1, L_00000000010494d0, L_0000000000616ba0, C4<1>, C4<1>;
+L_0000000000646bd0 .functor OR 1, L_00000000006497f0, L_0000000000616fe0, C4<0>, C4<0>;
+v0000000000616dc0_0 .net "X", 0 0, v00000000006469f0_0;  1 drivers
+v0000000000616920_0 .net "Y", 0 0, v0000000000646a90_0;  1 drivers
+v0000000000649570_0 .net "Z", 0 0, L_0000000000646bd0;  alias, 1 drivers
+v0000000000649610_0 .net *"_ivl_0", 0 0, L_00000000006497f0;  1 drivers
+v00000000006496b0_0 .net *"_ivl_2", 0 0, L_00000000010494d0;  1 drivers
+v0000000000649750_0 .net *"_ivl_4", 0 0, L_0000000000616ba0;  1 drivers
+v0000000000646950_0 .net *"_ivl_6", 0 0, L_0000000000616fe0;  1 drivers
+    .scope S_0000000001049340;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000006469f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000646a90_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000006469f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000646a90_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000006469f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000646a90_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000006469f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000646a90_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000006469f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000646a90_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 20 "$stop" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0000000001049340;
+T_1 ;
+    %vpi_call 2 24 "$monitor", "X=%b, Y=%b, Z=%b", v00000000006469f0_0, v0000000000646a90_0, v0000000000646b30_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "main_tb.v";
+    "main.v";
