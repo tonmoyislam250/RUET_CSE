@@ -1,0 +1,62 @@
+#! /mingw64/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\msys64\mingw64\lib\ivl\system.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\va_math.vpi";
+S_0000000000ec9710 .scope module, "tb_decoder3to8" "tb_decoder3to8" 2 1;
+ .timescale 0 0;
+v0000000000ec9ad0_0 .var "in", 2 0;
+v000000000068abe0_0 .net "out", 7 0, L_000000000068ac80;  1 drivers
+S_0000000000ec98a0 .scope module, "uut" "decoder3to8" 2 6, 3 1 0, S_0000000000ec9710;
+ .timescale 0 0;
+    .port_info 0 /INPUT 3 "in";
+    .port_info 1 /OUTPUT 8 "out";
+L_0000000000f0b838 .functor BUFT 1, C4<00000001>, C4<0>, C4<0>, C4<0>;
+v0000000000e96d10_0 .net/2s *"_ivl_0", 7 0, L_0000000000f0b838;  1 drivers
+v0000000000e96920_0 .net "in", 2 0, v0000000000ec9ad0_0;  1 drivers
+v0000000000ec9a30_0 .net "out", 7 0, L_000000000068ac80;  alias, 1 drivers
+L_000000000068ac80 .shift/l 8, L_0000000000f0b838, v0000000000ec9ad0_0;
+    .scope S_0000000000ec9710;
+T_0 ;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0000000000ec9ad0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0000000000ec9ad0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 2, 0, 3;
+    %store/vec4 v0000000000ec9ad0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 3, 0, 3;
+    %store/vec4 v0000000000ec9ad0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 4, 0, 3;
+    %store/vec4 v0000000000ec9ad0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 5, 0, 3;
+    %store/vec4 v0000000000ec9ad0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 6, 0, 3;
+    %store/vec4 v0000000000ec9ad0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v0000000000ec9ad0_0, 0, 3;
+    %delay 10, 0;
+    %vpi_call 2 20 "$stop" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0000000000ec9710;
+T_1 ;
+    %vpi_call 2 24 "$monitor", "Time = %0t: in = %b, out = %b", $time, v0000000000ec9ad0_0, v000000000068abe0_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "main_tb.v";
+    "main.v";

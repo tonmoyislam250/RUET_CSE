@@ -1,0 +1,59 @@
+#! /mingw64/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\msys64\mingw64\lib\ivl\system.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\va_math.vpi";
+S_0000000000dc9890 .scope module, "tb_mux4to1" "tb_mux4to1" 2 1;
+ .timescale 0 0;
+v0000000000dc9c50_0 .var "in", 3 0;
+v0000000000d7ad20_0 .net "out", 0 0, L_0000000000d7ae60;  1 drivers
+v0000000000d7adc0_0 .var "sel", 1 0;
+S_0000000000dc9a20 .scope module, "uut" "mux4to1" 2 7, 3 1 0, S_0000000000dc9890;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "sel";
+    .port_info 1 /INPUT 4 "in";
+    .port_info 2 /OUTPUT 1 "out";
+v0000000000d96cd0_0 .net "in", 3 0, v0000000000dc9c50_0;  1 drivers
+v0000000000d96920_0 .net "out", 0 0, L_0000000000d7ae60;  alias, 1 drivers
+v0000000000dc9bb0_0 .net "sel", 1 0, v0000000000d7adc0_0;  1 drivers
+L_0000000000d7ae60 .part/v v0000000000dc9c50_0, v0000000000d7adc0_0, 1;
+    .scope S_0000000000dc9890;
+T_0 ;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0000000000d7adc0_0, 0, 2;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v0000000000dc9c50_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0000000000d7adc0_0, 0, 2;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v0000000000dc9c50_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v0000000000d7adc0_0, 0, 2;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v0000000000dc9c50_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 3, 0, 2;
+    %store/vec4 v0000000000d7adc0_0, 0, 2;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v0000000000dc9c50_0, 0, 4;
+    %delay 10, 0;
+    %vpi_call 2 18 "$stop" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0000000000dc9890;
+T_1 ;
+    %vpi_call 2 22 "$monitor", "Time = %0t: sel = %b, in = %b, out = %b", $time, v0000000000d7adc0_0, v0000000000dc9c50_0, v0000000000d7ad20_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "main_tb.v";
+    "main.v";
