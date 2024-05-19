@@ -1,0 +1,99 @@
+#! /mingw64/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\msys64\mingw64\lib\ivl\system.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\va_math.vpi";
+S_0000000000e09500 .scope module, "counter_tb" "counter_tb" 2 2;
+ .timescale -9 -9;
+v0000000000e614d0_0 .var "clk", 0 0;
+v0000000000e61d90_0 .net "q", 6 0, L_0000000000e08e80;  1 drivers
+v0000000000e61390_0 .var "reset", 0 0;
+S_0000000000e09690 .scope module, "counter_circuit1" "counter" 2 7, 3 3 0, S_0000000000e09500;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "CLK";
+    .port_info 1 /INPUT 1 "Reset";
+    .port_info 2 /OUTPUT 7 "q";
+L_0000000000e08e80 .functor BUFZ 7, v0000000000e19ad0_0, C4<0000000>, C4<0000000>, C4<0000000>;
+v0000000000efd770_0 .net "CLK", 0 0, v0000000000e614d0_0;  1 drivers
+v0000000000efd810_0 .net "Reset", 0 0, v0000000000e61390_0;  1 drivers
+v0000000000efd8b0_0 .net "d_temp", 6 0, L_0000000000e61930;  1 drivers
+v0000000000e61c50_0 .net "q", 6 0, L_0000000000e08e80;  alias, 1 drivers
+v0000000000e611b0_0 .net "q_temp", 6 0, v0000000000e19ad0_0;  1 drivers
+S_0000000000e19710 .scope module, "adder_circuit1" "addOne" 3 12, 4 1 0, S_0000000000e09690;
+ .timescale 0 0;
+    .port_info 0 /INPUT 7 "I";
+    .port_info 1 /OUTPUT 7 "O";
+v0000000000de6d30_0 .net "I", 6 0, v0000000000e19ad0_0;  alias, 1 drivers
+v0000000000e092b0_0 .net "O", 6 0, L_0000000000e61930;  alias, 1 drivers
+L_0000000000e62038 .functor BUFT 1, C4<0000001>, C4<0>, C4<0>, C4<0>;
+v0000000000e09100_0 .net/2u *"_ivl_0", 6 0, L_0000000000e62038;  1 drivers
+L_0000000000e61930 .arith/sum 7, v0000000000e19ad0_0, L_0000000000e62038;
+S_0000000000e198a0 .scope module, "register_circuit1" "register" 3 11, 5 1 0, S_0000000000e09690;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 7 "d";
+    .port_info 3 /OUTPUT 7 "q";
+v0000000000efac00_0 .net "clk", 0 0, v0000000000e614d0_0;  alias, 1 drivers
+v0000000000e19a30_0 .net "d", 6 0, L_0000000000e61930;  alias, 1 drivers
+v0000000000e19ad0_0 .var "q", 6 0;
+v0000000000efd6d0_0 .net "reset", 0 0, v0000000000e61390_0;  alias, 1 drivers
+E_0000000000ef9710 .event posedge, v0000000000efd6d0_0, v0000000000efac00_0;
+    .scope S_0000000000e198a0;
+T_0 ;
+    %wait E_0000000000ef9710;
+    %load/vec4 v0000000000efd6d0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 7;
+    %assign/vec4 v0000000000e19ad0_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0000000000e19a30_0;
+    %assign/vec4 v0000000000e19ad0_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0000000000e09500;
+T_1 ;
+    %load/vec4 v0000000000e614d0_0;
+    %inv;
+    %store/vec4 v0000000000e614d0_0, 0, 1;
+    %delay 10, 0;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0000000000e09500;
+T_2 ;
+    %vpi_call 2 15 "$dumpfile", "main_tb.vcd" {0 0 0};
+    %vpi_call 2 16 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000000000e09500 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000000000e614d0_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0000000000e61390_0, 0;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000000000e61390_0, 0;
+    %delay 20, 0;
+    %delay 20, 0;
+    %delay 20, 0;
+    %delay 20, 0;
+    %vpi_call 2 27 "$stop" {0 0 0};
+    %end;
+    .thread T_2;
+    .scope S_0000000000e09500;
+T_3 ;
+    %vpi_call 2 31 "$monitor", "clk = %b, reset = %b, q = %b", v0000000000e614d0_0, v0000000000e61390_0, v0000000000e61d90_0 {0 0 0};
+    %end;
+    .thread T_3;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "main_tb.v";
+    "main.v";
+    "./adder.v";
+    "./register.v";

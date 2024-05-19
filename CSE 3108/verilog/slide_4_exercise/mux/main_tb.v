@@ -1,15 +1,26 @@
+`include "main2.v"
+`include "main3.v"
 module tb_mux4to1;
 
 reg [1:0] sel;
 reg [3:0] in;
 wire out;
 
-mux4to1 uut (
+// mux4to1 uut (
+//     .sel(sel),
+//     .in(in),
+//     .out(out)
+// );
+// mux4to1_if uut (
+//     .sel(sel),
+//     .in(in),
+//     .out(out)
+// );
+mux4to1_case uut (
     .sel(sel),
     .in(in),
     .out(out)
 );
-
 initial begin
     sel = 2'b00; in = 4'b1010;
     #10 sel = 2'b01; in = 4'b1010;

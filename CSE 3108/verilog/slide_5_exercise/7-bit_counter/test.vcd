@@ -1,0 +1,101 @@
+$date
+	Sun May 19 11:56:07 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module counter_tb $end
+$var wire 7 ! q [6:0] $end
+$var reg 1 " clk $end
+$var reg 1 # reset $end
+$scope module counter_circuit1 $end
+$var wire 1 " CLK $end
+$var wire 1 # Reset $end
+$var wire 7 $ q [6:0] $end
+$var wire 7 % q_temp [6:0] $end
+$var wire 7 & d_temp [6:0] $end
+$scope module adder_circuit1 $end
+$var wire 7 ' O [6:0] $end
+$var wire 7 ( I [6:0] $end
+$upscope $end
+$scope module register_circuit1 $end
+$var wire 1 " clk $end
+$var wire 7 ) d [6:0] $end
+$var wire 1 # reset $end
+$var reg 7 * q [6:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 *
+b1 )
+b0 (
+b1 '
+b1 &
+b0 %
+b0 $
+1#
+0"
+b0 !
+$end
+#10
+1"
+#20
+0#
+0"
+#30
+b10 &
+b10 '
+b10 )
+b1 !
+b1 $
+b1 %
+b1 (
+b1 *
+1"
+#40
+0"
+#50
+b11 &
+b11 '
+b11 )
+b10 !
+b10 $
+b10 %
+b10 (
+b10 *
+1"
+#60
+0"
+#70
+b100 &
+b100 '
+b100 )
+b11 !
+b11 $
+b11 %
+b11 (
+b11 *
+1"
+#80
+0"
+#90
+b101 &
+b101 '
+b101 )
+b100 !
+b100 $
+b100 %
+b100 (
+b100 *
+1"
+#100
+0"
