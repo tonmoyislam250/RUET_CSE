@@ -1,0 +1,4 @@
+OSI Models: Open Systems Interconnection
+7 Layers: Application, Presentation, Session, Transport, Network, Data Link, Physical
+TCP/IP: 
+SMTP: Simple Mail Transfer Protocol

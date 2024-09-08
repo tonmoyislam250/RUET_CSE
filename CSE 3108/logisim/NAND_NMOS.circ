@@ -56,44 +56,44 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(190,110)" name="Pin">
+    <comp lib="0" loc="(410,250)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A"/>
     </comp>
-    <comp lib="0" loc="(190,170)" name="Pin">
+    <comp lib="0" loc="(410,310)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B"/>
     </comp>
-    <comp lib="0" loc="(260,150)" name="Transistor">
-      <a name="facing" val="north"/>
-      <a name="selloc" val="bl"/>
-      <a name="type" val="n"/>
-    </comp>
-    <comp lib="0" loc="(260,220)" name="Ground"/>
-    <comp lib="0" loc="(260,60)" name="Pull Resistor">
+    <comp lib="0" loc="(480,200)" name="Pull Resistor">
       <a name="pull" val="1"/>
     </comp>
-    <comp lib="0" loc="(260,90)" name="Transistor">
+    <comp lib="0" loc="(480,230)" name="Transistor">
       <a name="facing" val="north"/>
       <a name="selloc" val="bl"/>
       <a name="type" val="n"/>
     </comp>
-    <comp lib="0" loc="(310,80)" name="Pin">
+    <comp lib="0" loc="(480,290)" name="Transistor">
+      <a name="facing" val="north"/>
+      <a name="selloc" val="bl"/>
+      <a name="type" val="n"/>
+    </comp>
+    <comp lib="0" loc="(480,360)" name="Ground"/>
+    <comp lib="0" loc="(530,220)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="C"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="8" loc="(247,259)" name="Text">
+    <comp lib="8" loc="(465,395)" name="Text">
       <a name="font" val="Times New Roman bold 16"/>
       <a name="text" val="NAND with NMOS"/>
     </comp>
-    <wire from="(190,110)" to="(240,110)"/>
-    <wire from="(190,170)" to="(240,170)"/>
-    <wire from="(260,130)" to="(260,150)"/>
-    <wire from="(260,190)" to="(260,220)"/>
-    <wire from="(260,60)" to="(260,80)"/>
-    <wire from="(260,80)" to="(260,90)"/>
-    <wire from="(260,80)" to="(310,80)"/>
+    <wire from="(410,250)" to="(460,250)"/>
+    <wire from="(410,310)" to="(460,310)"/>
+    <wire from="(480,200)" to="(480,220)"/>
+    <wire from="(480,220)" to="(480,230)"/>
+    <wire from="(480,220)" to="(530,220)"/>
+    <wire from="(480,270)" to="(480,290)"/>
+    <wire from="(480,330)" to="(480,360)"/>
   </circuit>
 </project>
