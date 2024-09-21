@@ -95,14 +95,12 @@
 --     (38, 11),
 --     (39, 11);
 
-SELECT * FROM movie_characters;
-
 -- Query 1.1: Find the name and age of all the movie-characters who are
 -- not teenagers.
 
 SELECT Character_Name, Age
 FROM movie_characters
-WHERE Age > 13 AND Age < 19;
+WHERE Age < 13 OR Age > 19;
 
 -- Query 1.2: Find the movie ID of all the movies and the number of
 -- movie-characters in each movie.
@@ -140,6 +138,8 @@ SELECT
     Director_Name
 FROM 
     Movie
+JOIN 
+    Director ON Movie.Director_ID = Director.Person_ID
 WHERE 
     LENGTH(Movie_Name) <= 12;
 
@@ -147,8 +147,8 @@ WHERE
 -- the highest IMDb rating in each genre.
 
 SELECT 
-    M.Genre, 
     M.Movie_Name, 
+    M.Genre, 
     M.IMDB_Rating
 FROM 
     Movie M
