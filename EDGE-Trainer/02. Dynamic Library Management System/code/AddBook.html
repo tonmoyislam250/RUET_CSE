@@ -1,0 +1,42 @@
+<!-- AddBook.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="Dashboard.html">Library Admin Panel</a>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2>Add Book</h2>
+        <form id="addBookForm">
+            <div class="mb-3">
+                <label for="bookTitle" class="form-label">Book Title</label>
+                <input type="text" class="form-control" id="bookTitle" placeholder="Enter book title" required>
+            </div>
+            <div class="mb-3">
+                <label for="bookAuthor" class="form-label">Author</label>
+                <input type="text" class="form-control" id="bookAuthor" placeholder="Enter author's name" required>
+            </div>
+            <div class="mb-3">
+                <label for="bookPrice" class="form-label">Price</label>
+                <input type="number" class="form-control" id="bookPrice" placeholder="Enter book price" required>
+            </div>
+            <div class="mb-3">
+                <label for="bookStatus" class="form-label">Status</label>
+                <select class="form-select" id="bookStatus">
+                    <option value="Available">Available</option>
+                    <option value="Issued">Issued</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Add Book</button>
+        </form>
+    </div>
+</body>
+</html>

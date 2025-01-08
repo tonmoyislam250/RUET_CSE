@@ -1,0 +1,37 @@
+
+.user-table {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    overflow-x: auto;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #f4f4f4;
+}
+a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: blue;
+}
+a[style] {
+    font-weight: bold;
+    color: black;
+}
+
+
+@media (max-width: 500px) {
+    table {
+        width: 480px;
+    }
+}
