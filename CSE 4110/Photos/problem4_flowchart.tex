@@ -1,0 +1,45 @@
+\begin{tikzpicture}[node distance=3cm, auto]
+    % Define styles
+    \tikzstyle{provider} = [rectangle, minimum width=3cm, minimum height=1.2cm, text centered, draw=black, fill=gray!20]
+    \tikzstyle{alphanet} = [rectangle, minimum width=3cm, minimum height=1.2cm, text centered, draw=black, fill=blue!20]
+    \tikzstyle{client} = [rectangle, minimum width=2.5cm, minimum height=1.2cm, text centered, draw=black, fill=green!20]
+    \tikzstyle{problem} = [ellipse, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=red!20]
+    \tikzstyle{arrow} = [thick,->,>=stealth]
+    \tikzstyle{danger} = [thick,->,>=stealth, red]
+
+    % Infrastructure chain
+    \node (upstream) [provider] {Upstream Provider};
+    \node (alphanet) [alphanet, below of=upstream] {Alpha Net};
+    \node (clients) [client, below of=alphanet] {End Clients};
+
+    % Dependency arrows
+    \draw [arrow] (upstream) -- node[right] {Master Servers} (alphanet);
+    \draw [arrow] (alphanet) -- node[right] {Services} (clients);
+
+    % Failure scenario
+    \node (failure) [problem, right of=upstream, xshift=3cm] {Provider Failure};
+    \node (outage) [problem, right of=alphanet, xshift=3cm] {Service Outage};
+    \node (impact) [problem, right of=clients, xshift=3cm] {Client Downtime};
+
+    % Failure cascade
+    \draw [danger] (failure) -- (outage);
+    \draw [danger] (outage) -- (impact);
+    \draw [danger] (upstream) -- (failure);
+
+    % Single point of failure indicator
+    \node [above right] at (upstream.north east) {\textcolor{red}{\textbf{SPOF}}};
+
+    % Risk factors (left side)
+    \node (financial) [problem, left of=upstream, xshift=-3.5cm] {Financial Issues};
+    \node (technical) [problem, left of=alphanet, xshift=-3.5cm] {Technical Problems};
+    \node (control) [problem, left of=clients, xshift=-3.5cm] {Limited Control};
+
+    % Risk arrows
+    \draw [danger] (financial) -- (upstream);
+    \draw [danger] (technical) -- (upstream);
+    \draw [arrow] (control) -- (alphanet);
+
+    % Labels
+    \node [above] at (failure.north) {\small Vendor Risks};
+    \node [below] at (impact.south) {\small Business Impact};
+\end{tikzpicture}

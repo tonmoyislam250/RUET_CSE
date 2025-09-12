@@ -1,0 +1,40 @@
+\documentclass[a4paper,12pt]{report}
+%------------------- Packages -------------------
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{transparent}
+\usepackage{xcolor}
+\definecolor{golden}{RGB}{218,165,32}
+\usepackage{floatrow}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{pgf-pie}
+\usetikzlibrary{positioning, shapes.geometric, arrows.meta, calc}
+
+\usepackage{tcolorbox}
+\usetikzlibrary{shapes.geometric}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+\usepackage[hidelinks]{hyperref} % Make TOC and references clickable
+
+%------------------- Document -------------------
+\begin{document}
+
+% Cover Page
+\input{cover_page}
+
+% Table of Contents
+\tableofcontents
+\clearpage
+
+% Chapters
+\input{chapters/chapter_1}
+\input{chapters/chapter_2}
+\input{chapters/chapter_3}
+
+% (Optional) Bibliography or Appendices can be added here
+
+\end{document}

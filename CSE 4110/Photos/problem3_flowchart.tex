@@ -1,0 +1,45 @@
+\begin{tikzpicture}[node distance=2cm, auto]
+    % Define styles
+    \tikzstyle{process} = [rectangle, minimum width=2.2cm, minimum height=1cm, text centered, draw=black, fill=blue!20, font=\small]
+    \tikzstyle{manual} = [rectangle, minimum width=2.2cm, minimum height=1cm, text centered, draw=black, fill=red!20, font=\small]
+    \tikzstyle{problem} = [ellipse, minimum width=1.7cm, minimum height=0.8cm, text centered, draw=black, fill=orange!20, font=\scriptsize]
+    \tikzstyle{arrow} = [thick,->,>=stealth]
+
+    % Current Process Flow
+    \node (incident) [process] {Incident Occurs};
+    \node (client) [manual, below of=incident] {Client Reports Issue};
+    \node (manual-triage) [manual, below of=client] {Manual Ticket Triage};
+    \node (manual-resolution) [manual, below of=manual-triage] {Manual Resolution};
+
+    % Problems on the side
+    \node (reactive) [problem, right of=client, xshift=3cm] {70\% Reactive Support};
+    \node (workload) [problem, right of=manual-triage, xshift=3cm] {High Manual Workload};
+    \node (delays) [problem, right of=manual-resolution, xshift=3cm] {Delayed Resolution};
+
+    % Missing Automation (shown as crossed out)
+    \node (ai-monitor) [process, left of=incident, xshift=-3cm, opacity=0.3] {AI Monitoring};
+    \node (auto-triage) [process, left of=manual-triage, xshift=-3cm, opacity=0.3] {Auto Triage};
+    \node (predictive) [process, left of=manual-resolution, xshift=-3cm, opacity=0.3] {Predictive Analytics};
+
+    % Main flow arrows
+    \draw [arrow] (incident) -- (client);
+    \draw [arrow] (client) -- (manual-triage);
+    \draw [arrow] (manual-triage) -- (manual-resolution);
+
+    % Problem arrows
+    \draw [arrow, red] (client) -- (reactive);
+    \draw [arrow, red] (manual-triage) -- (workload);
+    \draw [arrow, red] (manual-resolution) -- (delays);
+
+    % Missing automation (crossed out)
+    \draw [red, thick] (ai-monitor.north west) -- (ai-monitor.south east);
+    \draw [red, thick] (ai-monitor.north east) -- (ai-monitor.south west);
+    \draw [red, thick] (auto-triage.north west) -- (auto-triage.south east);
+    \draw [red, thick] (auto-triage.north east) -- (auto-triage.south west);
+    \draw [red, thick] (predictive.north west) -- (predictive.south east);
+    \draw [red, thick] (predictive.north east) -- (predictive.south west);
+
+    % Labels
+    \node [left] at (ai-monitor.west) {\small Missing:};
+    \node [above right, xshift=0.5cm] at (reactive.north east) {\small Impact};
+\end{tikzpicture}

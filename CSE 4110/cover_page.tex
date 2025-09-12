@@ -1,0 +1,52 @@
+% cover_page.tex
+% This file contains the cover page for the lab report
+
+\newcommand{\LogoPath}{RUET_logo.png}
+
+\begin{titlepage}
+    \begin{center}
+
+        \AddToShipoutPicture*{\put(0.125\paperwidth,0.125\paperheight){
+                \transparent{0.1}
+                \includegraphics*[width=0.75\paperwidth,height=0.75\paperheight,keepaspectratio]{RUET_logo.png}
+            }
+        }
+        \textbf{\textcolor{golden}{\rmfamily Haven's Light is Our Guide}}
+
+        \begin{figure}[h]
+            \transparent{0.9}
+            \centering
+            \includegraphics[width=0.3\textwidth]{\LogoPath}
+        \end{figure}
+
+        \vspace*{0in}
+        \Large
+        \textbf{\mbox{Rajshahi University of Engineering \& Technology}}
+        \large
+        \textbf{\mbox{\textcolor{blue}{Department of Computer Science \& Engineering}}}
+
+        \vfill
+        \Huge
+        \textbf{\mbox{System Analysis and Design Sessional}}
+        \vfill
+
+        \Large
+        \textbf{System Analysis of Alpha Net Cloud and Technology Solutions}
+
+        % \small
+        \textbf{Group Members:} \\
+        \begin{tabular}{ll}
+        Maisha Farzana        & 2003025 \\
+        Farzana Haider        & 2003026 \\
+        Tonmoy                & 2003027 \\
+        Md. Abdullah Al Mamun & 2003028 \\
+        \end{tabular}
+
+
+        \vfill
+        \textbf{Date:} \\
+        \today
+
+        \vfill
+    \end{center}
+\end{titlepage}

@@ -1,0 +1,60 @@
+
+hello.o:     file format pe-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <printf>:
+   0:	55                   	push   rbp
+   1:	53                   	push   rbx
+   2:	48 83 ec 38          	sub    rsp,0x38
+   6:	48 8d 6c 24 30       	lea    rbp,[rsp+0x30]
+   b:	48 89 4d 20          	mov    QWORD PTR [rbp+0x20],rcx
+   f:	48 89 55 28          	mov    QWORD PTR [rbp+0x28],rdx
+  13:	4c 89 45 30          	mov    QWORD PTR [rbp+0x30],r8
+  17:	4c 89 4d 38          	mov    QWORD PTR [rbp+0x38],r9
+  1b:	48 8d 45 28          	lea    rax,[rbp+0x28]
+  1f:	48 89 45 f0          	mov    QWORD PTR [rbp-0x10],rax
+  23:	48 8b 5d f0          	mov    rbx,QWORD PTR [rbp-0x10]
+  27:	b9 01 00 00 00       	mov    ecx,0x1
+  2c:	48 8b 05 00 00 00 00 	mov    rax,QWORD PTR [rip+0x0]        # 33 <printf+0x33>
+  33:	ff d0                	call   rax
+  35:	48 89 c1             	mov    rcx,rax
+  38:	48 8b 45 20          	mov    rax,QWORD PTR [rbp+0x20]
+  3c:	49 89 d8             	mov    r8,rbx
+  3f:	48 89 c2             	mov    rdx,rax
+  42:	e8 00 00 00 00       	call   47 <printf+0x47>
+  47:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+  4a:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+  4d:	48 83 c4 38          	add    rsp,0x38
+  51:	5b                   	pop    rbx
+  52:	5d                   	pop    rbp
+  53:	c3                   	ret
+
+0000000000000054 <main>:
+  54:	55                   	push   rbp
+  55:	48 89 e5             	mov    rbp,rsp
+  58:	48 83 ec 30          	sub    rsp,0x30
+  5c:	e8 00 00 00 00       	call   61 <main+0xd>
+  61:	c7 45 fc 0a 00 00 00 	mov    DWORD PTR [rbp-0x4],0xa
+  68:	c7 45 f8 14 00 00 00 	mov    DWORD PTR [rbp-0x8],0x14
+  6f:	8b 55 fc             	mov    edx,DWORD PTR [rbp-0x4]
+  72:	8b 45 f8             	mov    eax,DWORD PTR [rbp-0x8]
+  75:	01 d0                	add    eax,edx
+  77:	89 45 f4             	mov    DWORD PTR [rbp-0xc],eax
+  7a:	8b 45 f4             	mov    eax,DWORD PTR [rbp-0xc]
+  7d:	89 c2                	mov    edx,eax
+  7f:	48 8d 05 00 00 00 00 	lea    rax,[rip+0x0]        # 86 <main+0x32>
+  86:	48 89 c1             	mov    rcx,rax
+  89:	e8 72 ff ff ff       	call   0 <printf>
+  8e:	b8 00 00 00 00       	mov    eax,0x0
+  93:	48 83 c4 30          	add    rsp,0x30
+  97:	5d                   	pop    rbp
+  98:	c3                   	ret
+  99:	90                   	nop
+  9a:	90                   	nop
+  9b:	90                   	nop
+  9c:	90                   	nop
+  9d:	90                   	nop
+  9e:	90                   	nop
+  9f:	90                   	nop

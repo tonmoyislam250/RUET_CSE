@@ -1,0 +1,42 @@
+\begin{tikzpicture}[node distance=3cm, auto]
+    % Define styles
+    \tikzstyle{dept} = [rectangle, minimum width=2.5cm, minimum height=1.2cm, text centered, draw=black, fill=green!20]
+    \tikzstyle{problem} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=red!20]
+    \tikzstyle{impact} = [ellipse, minimum width=2.5cm, minimum height=1cm, text centered, draw=black, fill=orange!20]
+    \tikzstyle{arrow} = [thick,->,>=stealth]
+    \tikzstyle{dashed-arrow} = [thick,->,>=stealth, dashed]
+
+    % Departments
+    \node (sales) [dept] {Sales};
+    \node (support) [dept, right of=sales, xshift=3cm] {Technical Support};
+    \node (dev) [dept, right of=support, xshift=3cm] {Development};
+
+    % Problems
+    \node (silos) [problem, below of=support, yshift=-0.5cm] {Data Silos};
+    \node (async) [problem, below left of=silos, xshift=-1.5cm] {Async Communication};
+    \node (docs) [problem, below right of=silos, xshift=1.5cm] {Inconsistent Documentation};
+
+    % Impacts
+    \node (delays) [impact, below of=silos, yshift=-1.5cm] {30\% Project Delays};
+    \node (redundant) [impact, below left of=delays, xshift=-2cm] {Redundant Work};
+    \node (frustration) [impact, below right of=delays, xshift=2cm] {Client Frustration};
+
+    % Arrows between departments (showing fragmentation)
+    \draw [dashed-arrow, red] (sales) -- (support);
+    \draw [dashed-arrow, red] (support) -- (dev);
+    \draw [dashed-arrow, red] (sales) to[bend left=30] (dev);
+
+    % Arrows to problems
+    \draw [arrow] (sales) -- (async);
+    \draw [arrow] (support) -- (silos);
+    \draw [arrow] (dev) -- (docs);
+
+    % Arrows to impacts
+    \draw [arrow] (silos) -- (delays);
+    \draw [arrow] (async) -- (redundant);
+    \draw [arrow] (docs) -- (frustration);
+
+    % Labels
+    \node [above, red] at ($(sales)!0.5!(support)$) {\small Fragmented};
+    \node [above, red] at ($(support)!0.5!(dev)$) {\small Communication};
+\end{tikzpicture}

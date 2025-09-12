@@ -1,0 +1,194 @@
+% chapter_1.tex
+% Chapter 1: Recognition of Need
+
+
+\chapter{Recognition of Need}
+
+\section{Introduction}
+\textcolor{blue}{\href{https://www.alpha.net.bd/}{Alpha Net}} is a leading cloud and IT services provider based in Bangladesh, with an international presence through offices in Dhaka, Bogura, and the United States. Founded in 2001 by Abu Sufian Haider, the company has built a strong reputation for delivering enterprise-grade hosting, cloud servers, domain registration, email services, SMS gateways, and licensing solutions to over 5,000 clients in more than 60 countries.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Photos/brand-logo.png}
+    \caption{Official logo of Alpha Net}
+    \label{fig:alpha_net_logo}
+\end{figure}
+
+Alpha Net operates its own state-of-the-art data centers, designed to meet Tier-4 standards for maximum uptime and fault tolerance. These facilities are equipped with fully redundant power supplies (N+N UPS and diesel generators), precision cooling systems, and advanced fire suppression mechanisms to ensure uninterrupted service delivery. The network backbone leverages high-speed BDIX (Bangladesh Internet Exchange) connectivity, providing ultra-low latency access for local clients and direct peering with major ISPs, which significantly enhances data transfer speeds and reliability.
+
+The storage infrastructure is built on enterprise-grade NVMe SSD arrays, supporting high IOPS (Input/Output Operations Per Second) and rapid data retrieval for mission-critical applications. Alpha Net employs multi-layered security protocols, including biometric access controls, 24/7 CCTV surveillance, and real-time intrusion detection systems to safeguard client data and infrastructure.
+
+Comprehensive monitoring and management platforms are deployed to provide real-time visibility into hardware health, network performance, and application uptime. Automated failover and disaster recovery solutions are in place to minimize downtime and data loss in the event of hardware failures or natural disasters.
+
+Alpha Net's technical team maintains round-the-clock operations, proactively addressing potential issues and performing regular maintenance to ensure optimal performance. The company's infrastructure supports a wide range of services, including virtual and dedicated servers, cloud hosting, managed email, PBX/VoIP systems, and bulk SMS gateways, all of which are scalable to accommodate the evolving needs of clients.
+
+Serving a diverse clientele—including government agencies, financial institutions, large enterprises, SMEs, startups, and software developers—Alpha Net is committed to simplifying and fortifying digital infrastructure in Bangladesh and internationally. Through continuous investment in technology and skilled personnel, the company ensures robust, secure, and future-ready IT solutions for its customers.
+\\\\
+\noindent\textbf{Mission:}
+To empower businesses and individuals by delivering reliable, secure, and innovative cloud and IT solutions that ensure digital growth and continuity.
+\\\\
+\noindent\textbf{Vision:}
+To become the most trusted and customer-centric cloud services provider in Bangladesh and a recognized leader in the global IT industry.
+
+
+\subsection{Core Services:}
+\begin{itemize}
+    \item Domain Registration \& SSL certificates (.com, .bd, etc.)
+    \item Web Hosting: Windows (ASP.NET, .NET Core) and Linux (cPanel, BDIX-connected)
+    \item Virtual \& Dedicated Servers: Hosted in Tier-3/4 data centers in Bangladesh and the USA
+    \item Cloud RDP, Email Hosting, PBX/VoIP systems, bulk SMS, Zoom licensing
+    \item Web Design \& Development (corporate, e-commerce, CMS-based sites)
+\end{itemize}
+
+
+\subsection{Organizational Structure:}
+\textbf{Employee hierarchy of Alpha Net}
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[node distance=2.2cm, every node/.style={font=\small}, >=latex]
+        % First row (left)
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=blue!10] (ceo) {CEO \& Founder};
+        % Second row (right, horizontally to the right of sales)
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=green!10, below=1.5cm of ceo,] (opman) {Operations Manager};
+        % Third row (below provision, left side)
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=blue!10, below=1.5cm of ceo, left=2cm of opman] (techlead) {Technical Lead};
+        % Third row (below provision, left side)
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=yellow!10, below=1.5cm of ceo, right=2cm of opman] (sales) {Sales \& Marketing};
+
+        \node[draw=none, fill=none, minimum width=0pt, minimum height=0pt, inner sep=0pt, below=0.5cm of ceo] (middlepoint) {};       % Fourth row (left, horizontally to the left of support)
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=orange!10, below=0.4cm of techlead] (sys) {System Administrators Lead};
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=orange!10, below=0.4cm of sys] (dev) {Developers};
+        % Fifth row (below billing, right side)
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=orange!10, below=0.4cm of opman] (seng) {Support Engineers};
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=orange!10, below=0.4cm of seng] (noc) {NOC Operators};
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=orange!10, below=0.4cm of noc] (sd) {Service Desk};
+
+        % Sixth row (right, horizontally to the right of monitor)
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=purple!10, below=0.4cm of sales] (selex) {Sales Executives};
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=purple!10, below=0.4cm of selex] (dmarketing) {Digital Marketing};
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=purple!10, below=0.4cm of dmarketing] (ccreators) {Content Creators};
+        % \node[draw, rectangle, rounded
+        % Fifth row (below billing, right side)
+        % \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=red!10, below=1cm of billing] (monitor) {Monitoring \& Maintenance};
+        % Sixth row (right, horizontally to the right of monitor)
+        % \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=purple!10, right=1.3cm of monitor] (feedback) {Feedback \& Optimization};
+
+        % Arrows (snake-like)
+        \draw[-, thick] (ceo) -- (middlepoint);
+        % Draw arrows from middlepoint to techlead, opman, and sales to form a rectangular-like branching
+        \draw[->, thick] (middlepoint) -- ++(-5.5,0) |- (techlead.north);
+        \draw[->, thick] (middlepoint) -- (opman);
+        \draw[->, thick] (middlepoint) -- ++(5.5,0) |- (sales.north);
+        \draw[-, thick] (opman) -- (seng);
+        \draw[-, thick] (seng) -- (noc);
+        \draw[-, thick] (noc) -- (sd);
+        \draw[-, thick] (techlead) -- (sys);
+        \draw[-, thick] (sys) -- (dev);
+        \draw[-, thick] (sales) -- (selex);
+        \draw[-, thick] (selex) -- (dmarketing);
+        \draw[-, thick] (dmarketing) -- (ccreators);
+    \end{tikzpicture}
+    \label{fig:employee_hierarchy_flowchart}
+\end{figure}
+
+
+\subsection{Key Functional Workflow at Alpha Net}
+\begin{enumerate}
+    \item \textbf{Sales Initiation}
+    \begin{itemize}
+        \item Clients approach via website, live chat, or social media.
+        \item Sales team provides consultation and quotes.
+    \end{itemize}
+    \item \textbf{Service Provisioning}
+    \begin{itemize}
+        \item Technical team configures hosting, domain, email, or VPS after order confirmation.
+        \item Login credentials and usage guides are sent to clients.
+    \end{itemize}
+    \item \textbf{Ongoing Support}
+    \begin{itemize}
+        \item Support team handles client issues via ticketing system or direct call.
+        \item Complex issues are escalated to SysAdmins or Developers.
+    \end{itemize}
+    \item \textbf{Billing and Renewals}
+    \begin{itemize}
+        \item Automated billing reminders are sent via SMS and email.
+        \item Finance team oversees payment confirmation and renewals.
+    \end{itemize}
+    \item \textbf{Monitoring \& Maintenance}
+    \begin{itemize}
+        \item Servers are monitored 24/7 using tools like Zabbix and internal dashboards.
+        \item Security patches, backups, and incident response are handled by the NOC.
+    \end{itemize}
+    \item \textbf{Feedback and Optimization}
+    \begin{itemize}
+        \item Support and Sales teams gather client feedback for improvements.
+        \item Monthly internal review meetings address performance gaps.
+    \end{itemize}
+\end{enumerate}
+% Vertical flowchart using TikZ
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[node distance=2.2cm, every node/.style={font=\small}, >=latex]
+        % First row (left)
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=blue!10] (sales) {Sales Initiation};
+        % Second row (right, horizontally to the right of sales)
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=green!10, right=2cm of sales] (provision) {Service Provisioning};
+        % Third row (below provision, left side)
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=yellow!10, below=1cm of provision] (support) {Ongoing Support};
+        % Fourth row (left, horizontally to the left of support)
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=orange!10, left=2cm of support] (billing) {Billing \& Renewals};
+        % Fifth row (below billing, right side)
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=red!10, below=1cm of billing] (monitor) {Monitoring \& Maintenance};
+        % Sixth row (right, horizontally to the right of monitor)
+        \node[draw, rectangle, rounded corners, minimum width=3.5cm, minimum height=1.1cm, fill=purple!10, right=1.3cm of monitor] (feedback) {Feedback \& Optimization};
+
+        % Arrows (snake-like)
+        \draw[->, thick] (sales) -- (provision);
+        \draw[->, thick] (provision) -- (support);
+        \draw[->, thick] (support) -- (billing);
+        \draw[->, thick] (billing) -- (monitor);
+        \draw[->, thick] (monitor) -- (feedback);
+    \end{tikzpicture}
+    \caption{Snake-like flowchart of Alpha Net's key functional workflow}
+    \label{fig:alpha_net_workflow}
+\end{figure}
+
+\subsection{Company Values:}
+\begin{itemize}
+    \item Security First: Proactive infrastructure and client data protection
+    \item Customer-Centricity: Custom solutions based on client knowledge levels
+    \item Innovation: Adoption of new tech like BDIX peering and containerization
+    \item Reliability: 99.99\% uptime guarantee via Tier-3 and Tier-4 hosting infrastructure
+\end{itemize}
+
+
+\section{Problem Identification}
+
+\subsection{Problem 1: Limited Technical Awareness Among SME Clients Leads to Misaligned Service Adoption}
+
+A significant portion of Alpha Net's client base comprises non-technical small to medium enterprises (SMEs). These clients often struggle to understand key distinctions between hosting solutions (e.g., Shared Hosting vs. VPS vs. Dedicated Servers vs. BDIX-optimized plans), as well as the technical requirements and benefits associated with each option. This limited awareness leads to frequent misalignment between the services purchased and the actual needs of the business, resulting in either underutilization of resources or performance bottlenecks.
+
+Additionally, many SME clients lack familiarity with essential concepts such as DNS management, SSL certificates, security best practices, and backup strategies. As a result, they may inadvertently expose their businesses to security risks or operational disruptions. The absence of targeted educational resources and onboarding support further exacerbates these challenges, making it difficult for clients to make informed decisions and fully leverage Alpha Net's offerings.
+
+
+\subsection{Problem 2: Fragmented Internal Communication Between Cross-Functional Teams}
+There is an observable lack of seamless coordination between the Sales, Technical Support, and Development departments at Alpha Net. Critical information—such as client requirements, technical specifications, and project updates—is often communicated through informal channels (e.g., email threads, chat messages) rather than centralized platforms. This results in data silos, where essential details are not accessible to all relevant stakeholders.
+
+During key project and client lifecycle stages (such as onboarding, customization, and issue resolution), this fragmented communication leads to delays, duplicated efforts, and occasional misinterpretation of client needs. For example, the Sales team may promise features or timelines without full technical validation, while the Technical Support team may lack context about previous client interactions or customizations performed by Developers. The absence of integrated project management and CRM tools further exacerbates these challenges, making it difficult to track progress, assign accountability, and ensure a consistent client experience.
+
+\subsection{Problem 3: Absence of Intelligent Automation in Customer Support and Infrastructure Monitoring}
+
+Alpha Net's current support and monitoring workflows rely heavily on manual processes, which can be time-consuming and prone to human error. Support tickets are triaged and resolved by staff without the aid of AI-driven categorization, sentiment analysis, or automated knowledge base suggestions. This increases response times, especially during peak hours or when handling repetitive queries.
+
+Similarly, infrastructure monitoring is performed using traditional tools that generate alerts for predefined thresholds, but lack predictive analytics or anomaly detection capabilities. As a result, potential issues such as resource exhaustion, security breaches, or hardware failures may not be identified proactively. The absence of machine learning (ML) systems for trend analysis, automated remediation, or intelligent recommendations limits Alpha Net’s ability to scale support operations efficiently and maintain high service availability.
+
+\subsection{Problem 4: Overdependence on Upstream Infrastructure Providers Risks Service Continuity}
+
+Some Alpha Net hosting services are built on master servers and core infrastructure leased from third-party upstream vendors, both locally and internationally. This dependency introduces significant risks to service continuity and client satisfaction. If an upstream provider experiences technical outages, network disruptions, or defaults on payments to their own suppliers, Alpha Net’s end-clients may face unexpected downtime—even if Alpha Net itself is in good financial standing and has met all obligations.
+
+Such incidents can erode client trust, damage Alpha Net’s reputation, and result in financial losses due to service-level agreement (SLA) violations. Furthermore, limited visibility and control over the upstream provider’s operations make it challenging to implement rapid failover or disaster recovery strategies. Reducing this overdependence is essential for ensuring greater resilience, operational autonomy, and long-term business sustainability.
+
+
+\section{Conclusion}
+In summary, Alpha Net is a leading cloud and IT services provider in Bangladesh, with a strong focus on delivering reliable and innovative solutions to its diverse clientele. The company faces several challenges, including limited technical awareness among SME clients, fragmented internal communication, lack of intelligent automation, and overdependence on upstream infrastructure providers. Addressing these issues will be crucial for Alpha Net to maintain its competitive edge and continue providing exceptional service to its customers.
+
+By proactively investing in client education, streamlining internal workflows, and adopting advanced technologies such as AI-driven support and monitoring, Alpha Net can further enhance its operational efficiency and customer satisfaction. Strengthening partnerships and reducing reliance on third-party infrastructure will also help ensure greater service continuity and resilience. These strategic improvements will position Alpha Net for sustained growth and leadership in the rapidly evolving IT landscape.

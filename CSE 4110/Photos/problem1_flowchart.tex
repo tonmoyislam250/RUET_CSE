@@ -1,0 +1,27 @@
+\begin{tikzpicture}[node distance=3cm, auto]
+    % Define styles
+    \tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1.2cm, text centered, draw=black, fill=blue!20]
+    \tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1.5cm, text centered, draw=black, fill=red!20]
+    \tikzstyle{problem} = [rectangle, minimum width=3.5cm, minimum height=1.2cm, text centered, draw=black, fill=orange!20]
+    \tikzstyle{arrow} = [thick,->,>=stealth]
+
+    % Nodes
+    \node (sme) [process] {SME Client};
+    \node (selection) [decision, below of=sme, yshift=-0.5cm] {Service Selection};
+    \node (confusion) [problem, below left of=selection, xshift=-2cm, yshift=-0.5cm] {60\% Confusion};
+    \node (misalign) [problem, below of=selection, yshift=-0.5cm] {Service Misalignment};
+    \node (support) [problem, below right of=selection, xshift=2cm, yshift=-0.5cm] {40\% Support Tickets};
+    \node (churn) [problem, below of=misalign, yshift=-0.5cm] {Higher Churn Rate};
+
+    % Arrows
+    \draw [arrow] (sme) -- (selection);
+    \draw [arrow] (selection) -- (confusion);
+    \draw [arrow] (selection) -- (misalign);
+    \draw [arrow] (selection) -- (support);
+    \draw [arrow] (misalign) -- (churn);
+    
+    % Labels on arrows
+    \node [above left, xshift=-0.8cm] at ($(selection)!0.5!(confusion)$) {\small Lack of awareness};
+    \node [above right, xshift=0.8cm] at ($(selection)!0.5!(support)$) {\small Technical jargon};
+    \node [left] at ($(misalign)!0.5!(churn)$) {\small Unmet expectations};
+\end{tikzpicture}
